@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MathDocs
 
-## Getting Started
+A mathematics reference website built with **Next.js** (App Router, TypeScript, Tailwind CSS v4). The site language is **English**; every section ships with downloadable **PDFs in English and Russian**, generated locally and stored in `public/pdfs/`.
 
-First, run the development server:
+## Sections
+
+Algebra · Geometry · Trigonometry · Calculus · Linear Algebra · Probability & Statistics · Number Theory · Discrete Mathematics · Differential Equations · Physics
+
+Each section contains:
+
+- **Theory** — core topics with formulas rendered by KaTeX, lists, and notes
+- **Practice problems** — 5 problems per section (easy / medium / hard) with interactive answer & solution reveal
+- **PDF downloads** — one English and one Russian PDF per section (theory + all problems with answers and solutions)
+
+## Pages
+
+| Route              | Description                                        |
+| ------------------ | -------------------------------------------------- |
+| `/`                | Hero, section cards, stats, how-it-works           |
+| `/sections/[slug]` | Theory, formulas, practice problems, PDF buttons   |
+| `/practice`        | All 50 problems with section/difficulty filters    |
+| `/downloads`       | Table of all 20 PDFs with sizes and download links |
+
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev          # development server
+npm run build        # production build (type-check included)
+npm run start        # production server (add -- -p <port> to change port)
+npm run lint         # ESLint
+npm run pdfs         # regenerate all 20 PDFs from site content
+npm run check:glyphs # verify DejaVu font covers every content character
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Note: on this machine port 3000 is used by Gitea and 3001 by another Next.js app — use e.g. `npm run start -- -p 3002`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content model
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content is bilingual (`en` / `ru`) and lives in `lib/content/*.ts`:
 
-## Learn More
+- `lib/types.ts` — `Section`, `Topic`, `Block`, `Problem` types
+- `lib/content/helpers.ts` — compact constructors (`p`, `formula`, `list`, `note`, `topic`, `prob`)
+- Web pages render the English fields; formulas use LaTeX via KaTeX
+- PDFs render either language; formulas use Unicode strings (DejaVu Sans covers Cyrillic + math symbols)
 
-To learn more about Next.js, take a look at the following resources:
+To add or edit material: change the section file, then run `npm run pdfs` to refresh the PDFs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is Vercel-ready: standard Next.js App Router, no environment variables, no external services. The 20 PDFs and the DejaVu fonts are committed to the repo, so the deployed site serves them as static assets without any build-time generation.
 
-## Deploy on Vercel
+**Option A — Git integration (recommended):**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push this repo to GitHub/GitLab/Bitbucket.
+2. Import it at [vercel.com/new](https://vercel.com/new).
+3. Vercel auto-detects Next.js; keep the defaults (`npm run build`, output `.next`). Deploy.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Option B — Vercel CLI:**
+
+```bash
+npx vercel        # preview deployment
+npx vercel --prod # production deployment
+```
+
+Notes:
+
+- `next/font/google` (Geist) is fetched at build time — works out of the box on Vercel.
+- After editing content locally, run `npm run pdfs` and commit the refreshed PDFs before deploying.
+- Node.js ≥ 20.9 is required (Vercel's default runtime is fine).
+
+## PDF generation
+
+`scripts/generate-pdfs.ts` (pdfkit) builds A4 documents with opencode-style blue accents, formula boxes, notes, and a full problem set with answers and solutions. Fonts are bundled in `scripts/fonts/` (DejaVu Sans). Output: `public/pdfs/<slug>-<en|ru>.pdf`.
