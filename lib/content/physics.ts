@@ -99,6 +99,48 @@ export const physics: Section = {
         "R(посл.) = R₁ + R₂;   1/R(парал.) = 1/R₁ + 1/R₂",
       ),
     ]),
+    topic("thermodynamics", "Thermodynamics", "Термодинамика", [
+      p(
+        "The first law conserves energy: ΔU = Q − W. The second law says entropy of an isolated system never decreases. The ideal gas law links pressure, volume, and temperature.",
+        "Первое начало сохраняет энергию: ΔU = Q − W. Второе начало: энтропия изолированной системы не убывает. Уравнение идеального газа связывает давление, объём и температуру.",
+      ),
+      formula(
+        "\\Delta U = Q - W, \\qquad PV = nRT, \\qquad \\Delta S \\ge 0",
+        "ΔU = Q − W;   PV = nRT;   ΔS ≥ 0",
+      ),
+    ]),
+    topic("waves-optics", "Waves and Optics", "Волны и оптика", [
+      p(
+        "Waves carry energy without carrying matter: v = fλ. Light refracts according to Snell's law; interference and diffraction reveal its wave nature.",
+        "Волны переносят энергию, не перенося вещество: v = fλ. Свет преломляется по закону Снелла; интерференция и дифракция раскрывают его волновую природу.",
+      ),
+      formula(
+        "v = f\\lambda, \\qquad n_1\\sin\\theta_1 = n_2\\sin\\theta_2",
+        "v = fλ;   n₁sin θ₁ = n₂sin θ₂",
+        "Wave speed; Snell's law",
+        "Скорость волны; закон Снелла",
+      ),
+    ]),
+    topic("quantum", "Quantum Physics", "Квантовая физика", [
+      p(
+        "Energy comes in quanta E = hf. The Schrödinger equation governs the wavefunction; position and momentum cannot both be sharp (uncertainty principle).",
+        "Энергия приходит квантами E = hf. Уравнение Шрёдингера управляет волновой функцией; координата и импульс не могут быть одновременно точными (принцип неопределённости).",
+      ),
+      formula(
+        "E = hf, \\qquad i\\hbar\\frac{\\partial\\psi}{\\partial t} = \\hat{H}\\psi, \\qquad \\Delta x\\,\\Delta p \\ge \\frac{\\hbar}{2}",
+        "E = hf;   iℏ∂ψ/∂t = Ĥψ;   Δx·Δp ≥ ℏ/2",
+      ),
+    ]),
+    topic("relativity", "Relativity", "Теория относительности", [
+      p(
+        "Moving clocks run slow and lengths contract by the Lorentz factor γ. Mass and energy are equivalent: E = mc². Gravity is curvature of spacetime.",
+        "Движущиеся часы идут медленнее, длины сокращаются с лоренц-фактором γ. Масса и энергия эквивалентны: E = mc². Гравитация — искривление пространства-времени.",
+      ),
+      formula(
+        "\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}, \\qquad \\Delta t' = \\gamma\\,\\Delta t, \\qquad E = mc^2",
+        "γ = 1/√(1 − v²/c²);   Δt′ = γΔt;   E = mc²",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -145,6 +187,24 @@ export const physics: Section = {
       "t = 3 с, v = 30 м/с",
       "h = ½gt² ⇒ 45 = 5t² ⇒ t = 3 s. Then v = gt = 10·3 = 30 m/s. Check via energy: v = √(2gh) = √900 = 30 m/s.",
       "h = ½gt² ⇒ 45 = 5t² ⇒ t = 3 с. Тогда v = gt = 10·3 = 30 м/с. Проверка по энергии: v = √(2gh) = √900 = 30 м/с.",
+    ),
+    prob(
+      "f6", "medium",
+      "One mole of ideal gas is at 300 K. Find PV (R = 8.31 J/(mol·K)).",
+      "Один моль идеального газа при 300 K. Найдите PV (R = 8,31 Дж/(моль·К)).",
+      "≈ 2493 J",
+      "≈ 2493 Дж",
+      "PV = nRT = 1·8.31·300 = 2493 J.",
+      "PV = nRT = 1·8,31·300 = 2493 Дж.",
+    ),
+    prob(
+      "f7", "hard",
+      "How much energy is equivalent to 1 gram of mass? (c = 3×10⁸ m/s)",
+      "Какая энергия эквивалентна 1 грамму массы? (c = 3×10⁸ м/с)",
+      "9×10¹³ J",
+      "9×10¹³ Дж",
+      "E = mc² = 0.001·(3×10⁸)² = 0.001·9×10¹⁶ = 9×10¹³ J — about 21 kilotons of TNT.",
+      "E = mc² = 0,001·(3×10⁸)² = 0,001·9×10¹⁶ = 9×10¹³ Дж — около 21 килотонны в тротиловом эквиваленте.",
     ),
   ],
 };

@@ -86,6 +86,24 @@ export const trigonometry: Section = {
         ["Range of sin and cos is [−1, 1]; range of tan is all real numbers", "Область значений sin и cos: [−1, 1]; тангенса — все действительные числа"],
       ),
     ]),
+    topic("inverse-trig", "Inverse Functions and General Solutions", "Обратные функции и общие решения", [
+      p(
+        "Arcsin, arccos, arctan invert the trig functions on restricted domains: arcsin returns values in [−π/2, π/2], arccos in [0, π]. General solutions of trig equations add the period.",
+        "Arcsin, arccos, arctan обращают тригонометрические функции на ограниченных областях: arcsin возвращает значения из [−π/2, π/2], arccos — из [0, π]. Общие решения тригонометрических уравнений добавляют период.",
+      ),
+      formula(
+        "\\sin x = a \\;\\Rightarrow\\; x = (-1)^n \\arcsin a + \\pi n, \\quad n \\in \\mathbb{Z}",
+        "sin x = a  ⇒  x = (−1)ⁿ·arcsin a + πn,   n ∈ Z",
+      ),
+      formula(
+        "\\cos x = a \\;\\Rightarrow\\; x = \\pm\\arccos a + 2\\pi n",
+        "cos x = a  ⇒  x = ±arccos a + 2πn",
+      ),
+      note(
+        "arcsin and arccos are defined only for arguments in [−1, 1]; arctan accepts all real numbers.",
+        "arcsin и arccos определены только для аргументов из [−1, 1]; arctan принимает все действительные числа.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -132,6 +150,15 @@ export const trigonometry: Section = {
       "x = π/4, 3π/4, 5π/4, 7π/4",
       "2cos²x − 1 = cos 2x, so cos 2x = 0. Then 2x = π/2 + πk, giving x = π/4 + πk/2. In [0, 2π) this yields π/4, 3π/4, 5π/4, 7π/4.",
       "2cos²x − 1 = cos 2x, поэтому cos 2x = 0. Тогда 2x = π/2 + πk, откуда x = π/4 + πk/2. На [0, 2π) получаем π/4, 3π/4, 5π/4, 7π/4.",
+    ),
+    prob(
+      "t6", "medium",
+      "Evaluate arcsin(1/2) and arccos(−1).",
+      "Вычислите arcsin(1/2) и arccos(−1).",
+      "π/6 and π",
+      "π/6 и π",
+      "arcsin returns the angle in [−π/2, π/2] with sine 1/2: π/6. arccos returns the angle in [0, π] with cosine −1: π.",
+      "arcsin возвращает угол из [−π/2, π/2] с синусом 1/2: π/6. arccos возвращает угол из [0, π] с косинусом −1: π.",
     ),
   ],
 };

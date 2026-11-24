@@ -137,7 +137,7 @@ export default function Home() {
               {
                 step: "02",
                 title: "Solve the problems",
-                text: "Five problems per section, from easy to hard. Try them yourself, then reveal the answer and full solution.",
+                text: "Five to seven problems per section, from easy to hard. Try them yourself, then reveal the answer and full solution.",
               },
               {
                 step: "03",

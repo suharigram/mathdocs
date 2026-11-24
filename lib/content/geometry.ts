@@ -73,6 +73,27 @@ export const geometry: Section = {
         "При масштабировании тела в k раз длины умножаются на k, площади — на k², объёмы — на k³.",
       ),
     ]),
+    topic("analytic-geometry", "Analytic Geometry", "Аналитическая геометрия", [
+      p(
+        "Coordinates turn geometry into algebra. Distance and midpoint follow from Pythagoras; lines are linear equations; conic sections are quadratic curves — circles, ellipses, parabolas, hyperbolas.",
+        "Координаты превращают геометрию в алгебру. Расстояние и середина следуют из теоремы Пифагора; прямые — линейные уравнения; конические сечения — квадратичные кривые: окружности, эллипсы, параболы, гиперболы.",
+      ),
+      formula(
+        "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}, \\qquad M = \\Big(\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}\\Big)",
+        "d = √((x₂ − x₁)² + (y₂ − y₁)²);   M = ((x₁ + x₂)/2, (y₁ + y₂)/2)",
+      ),
+      formula(
+        "y = kx + b, \\qquad (x-a)^2 + (y-b)^2 = r^2",
+        "y = kx + b;   (x − a)² + (y − b)² = r²",
+        "Line (slope k) and circle (center (a,b), radius r)",
+        "Прямая (угловой коэффициент k) и окружность (центр (a,b), радиус r)",
+      ),
+      list(
+        ["Ellipse: x²/a² + y²/b² = 1", "Эллипс: x²/a² + y²/b² = 1"],
+        ["Hyperbola: x²/a² − y²/b² = 1", "Гипербола: x²/a² − y²/b² = 1"],
+        ["Parabola: y = ax² (focus-directrix property)", "Парабола: y = ax² (свойство фокуса и директрисы)"],
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -119,6 +140,15 @@ export const geometry: Section = {
       "S = 60",
       "The altitude to the base bisects it: half-base is 5. By Pythagoras, h² = 13² − 5² = 144, so h = 12. Area = ½·10·12 = 60.",
       "Высота к основанию делит его пополам: половина основания равна 5. По теореме Пифагора h² = 13² − 5² = 144, значит h = 12. Площадь = ½·10·12 = 60.",
+    ),
+    prob(
+      "g6", "medium",
+      "Find the distance between (1, 2) and (4, 6).",
+      "Найдите расстояние между точками (1, 2) и (4, 6).",
+      "5",
+      "5",
+      "d = √((4−1)² + (6−2)²) = √(9 + 16) = 5.",
+      "d = √((4−1)² + (6−2)²) = √(9 + 16) = 5.",
     ),
   ],
 };

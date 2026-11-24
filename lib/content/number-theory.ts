@@ -81,6 +81,28 @@ export const numberTheory: Section = {
         "Шифрование RSA опирается на сложность разложения больших чисел и на сравнения в духе теорем Ферма–Эйлера.",
       ),
     ]),
+    topic("arithmetic-functions", "Arithmetic Functions and Euler's Theorem", "Арифметические функции и теорема Эйлера", [
+      p(
+        "Arithmetic functions live on the integers: τ(n) counts divisors, σ(n) sums them, φ(n) counts numbers ≤ n coprime to n. Multiplicative functions are determined by their values on prime powers.",
+        "Арифметические функции живут на целых числах: τ(n) считает делители, σ(n) суммирует их, φ(n) считает числа ≤ n, взаимно простые с n. Мультипликативные функции определяются значениями на степенях простых.",
+      ),
+      formula(
+        "\\varphi(n) = n\\prod_{p \\mid n}\\Big(1 - \\frac{1}{p}\\Big)",
+        "φ(n) = n·∏ (1 − 1/p)   (по простым p | n)",
+        "Euler's totient",
+        "Функция Эйлера",
+      ),
+      formula(
+        "a^{\\varphi(n)} \\equiv 1 \\pmod{n} \\quad (\\gcd(a,n) = 1)",
+        "a^φ(n) ≡ 1 (mod n)   (НОД(a, n) = 1)",
+        "Euler's theorem (generalizes Fermat)",
+        "Теорема Эйлера (обобщает теорему Ферма)",
+      ),
+      note(
+        "Euler's theorem is exactly why RSA decryption works: ed ≡ 1 (mod φ(n)) restores the message.",
+        "Теорема Эйлера — именно причина работоспособности расшифрования RSA: ed ≡ 1 (mod φ(n)) восстанавливает сообщение.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -127,6 +149,15 @@ export const numberTheory: Section = {
       "x ≡ 5 (mod 7)",
       "We need the inverse of 3 modulo 7. Testing: 3·5 = 15 ≡ 1 (mod 7), so x ≡ 5 (mod 7).",
       "Нужен обратный к 3 по модулю 7. Перебором: 3·5 = 15 ≡ 1 (mod 7), значит x ≡ 5 (mod 7).",
+    ),
+    prob(
+      "n6", "medium",
+      "Compute φ(12).",
+      "Вычислите φ(12).",
+      "4",
+      "4",
+      "12 = 2²·3, so φ(12) = 12·(1 − 1/2)(1 − 1/3) = 12·(1/2)·(2/3) = 4. The coprime numbers are 1, 5, 7, 11.",
+      "12 = 2²·3, значит φ(12) = 12·(1 − 1/2)(1 − 1/3) = 12·(1/2)·(2/3) = 4. Взаимно простые числа: 1, 5, 7, 11.",
     ),
   ],
 };

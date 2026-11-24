@@ -4,12 +4,14 @@ A mathematics reference website built with **Next.js** (App Router, TypeScript, 
 
 ## Sections
 
-Algebra · Geometry · Trigonometry · Calculus · Linear Algebra · Probability & Statistics · Number Theory · Discrete Mathematics · Differential Equations · Physics
+37 sections covering the full spectrum of mathematics, ordered from foundations to advanced topics:
+
+Arithmetic & Pre-Algebra · Algebra · Geometry · Trigonometry · Sequences & Series · Calculus · Multivariable Calculus · Vector Calculus · Differential Equations · PDEs · Linear Algebra · Abstract Algebra · Number Theory · Cryptography · Discrete Mathematics · Mathematical Logic · Set Theory · Category Theory · Probability & Statistics · Stochastic Processes · Real Analysis · Measure Theory · Functional Analysis · Complex Analysis · Special Functions · Topology · Differential Geometry · Algebraic Geometry · Dynamical Systems & Chaos · Fractal Geometry · Numerical Analysis · Optimization · Calculus of Variations · Game Theory · Information Theory · Financial Mathematics · Physics
 
 Each section contains:
 
 - **Theory** — core topics with formulas rendered by KaTeX, lists, and notes
-- **Practice problems** — 5 problems per section (easy / medium / hard) with interactive answer & solution reveal
+- **Practice problems** — 5–7 problems per section (easy / medium / hard) with interactive answer & solution reveal
 - **PDF downloads** — one English and one Russian PDF per section (theory + all problems with answers and solutions)
 
 ## Pages
@@ -19,7 +21,7 @@ Each section contains:
 | `/`                | Hero, section cards, stats, how-it-works           |
 | `/sections/[slug]` | Theory, formulas, practice problems, PDF buttons   |
 | `/practice`        | All 50 problems with section/difficulty filters    |
-| `/downloads`       | Table of all 20 PDFs with sizes and download links |
+| `/downloads`       | Table of all 74 PDFs with sizes and download links |
 
 ## Commands
 
@@ -28,7 +30,7 @@ npm run dev          # development server
 npm run build        # production build (type-check included)
 npm run start        # production server (add -- -p <port> to change port)
 npm run lint         # ESLint
-npm run pdfs         # regenerate all 20 PDFs from site content
+npm run pdfs         # regenerate all 74 PDFs from site content
 npm run check:glyphs # verify DejaVu font covers every content character
 ```
 
@@ -47,7 +49,7 @@ To add or edit material: change the section file, then run `npm run pdfs` to ref
 
 ## Deploy to Vercel
 
-The project is Vercel-ready: standard Next.js App Router, no environment variables, no external services. The 20 PDFs and the DejaVu fonts are committed to the repo, so the deployed site serves them as static assets without any build-time generation.
+The project is Vercel-ready: standard Next.js App Router, no environment variables, no external services. The 74 PDFs and the DejaVu fonts are committed to the repo, so the deployed site serves them as static assets without any build-time generation.
 
 **Option A — Git integration (recommended):**
 

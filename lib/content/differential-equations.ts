@@ -78,6 +78,24 @@ export const differentialEquations: Section = {
         "Гармонический осциллятор",
       ),
     ]),
+    topic("laplace", "The Laplace Transform", "Преобразование Лапласа", [
+      p(
+        "The Laplace transform converts a function of time into a function of s, turning differentiation into algebra. It solves linear ODEs with initial conditions — especially with jumps and impulses — in three steps: transform, solve algebraically, invert.",
+        "Преобразование Лапласа превращает функцию времени в функцию s, заменяя дифференцирование алгеброй. Оно решает линейные ОДУ с начальными условиями — особенно со скачками и импульсами — в три шага: преобразовать, решить алгебраически, обратить.",
+      ),
+      formula(
+        "\\mathcal{L}\\{f\\}(s) = \\int_0^{\\infty} e^{-st} f(t)\\,dt",
+        "L{f}(s) = ∫₀^∞ e^(−st)·f(t) dt",
+      ),
+      formula(
+        "\\mathcal{L}\\{f'\\} = sF(s) - f(0), \\qquad \\mathcal{L}\\{e^{at}\\} = \\frac{1}{s-a}",
+        "L{f′} = sF(s) − f(0);   L{e^(at)} = 1/(s − a)",
+      ),
+      note(
+        "Partial fractions decompose F(s) into table entries; the inverse transform reads the solution back.",
+        "Разложение на простейшие дроби превращает F(s) в табличные слагаемые; обратное преобразование считывает решение.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -124,6 +142,15 @@ export const differentialEquations: Section = {
       "y = e^x/2 + C·e^(−x)",
       "Integrating factor μ = e^x. Then (y·e^x)′ = e^(2x), so y·e^x = e^(2x)/2 + C, giving y = e^x/2 + C·e^(−x).",
       "Интегрирующий множитель μ = e^x. Тогда (y·e^x)′ = e^(2x), значит y·e^x = e^(2x)/2 + C, откуда y = e^x/2 + C·e^(−x).",
+    ),
+    prob(
+      "e6", "medium",
+      "Find the Laplace transform of f(t) = 1.",
+      "Найдите преобразование Лапласа функции f(t) = 1.",
+      "1/s (s > 0)",
+      "1/s (s > 0)",
+      "∫₀^∞ e^(−st)dt = [−e^(−st)/s]₀^∞ = 1/s for s > 0.",
+      "∫₀^∞ e^(−st)dt = [−e^(−st)/s]₀^∞ = 1/s при s > 0.",
     ),
   ],
 };

@@ -83,6 +83,34 @@ export const probabilityStatistics: Section = {
         "Медиана устойчивее к выбросам, чем среднее, — поэтому доходы обычно приводят как медиану.",
       ),
     ]),
+    topic("limit-theorems", "Limit Theorems", "Предельные теоремы", [
+      p(
+        "The law of large numbers: sample averages converge to the expectation. The central limit theorem: sums of many independent effects become approximately normal, regardless of the original distribution — the reason the bell curve is everywhere.",
+        "Закон больших чисел: выборочные средние сходятся к математическому ожиданию. Центральная предельная теорема: суммы многих независимых воздействий становятся приблизительно нормальными независимо от исходного распределения — причина повсеместности колоколообразной кривой.",
+      ),
+      formula(
+        "\\bar{X}_n \\to \\mu, \\qquad \\frac{\\bar{X}_n - \\mu}{\\sigma/\\sqrt{n}} \\xrightarrow{d} N(0,1)",
+        "X̄ₙ → μ;   (X̄ₙ − μ)/(σ/√n) → N(0, 1) по распределению",
+        "LLN and CLT",
+        "ЗБЧ и ЦПТ",
+      ),
+    ]),
+    topic("inference", "Statistical Inference", "Статистический вывод", [
+      p(
+        "Inference estimates parameters and tests hypotheses from samples. A confidence interval covers the true value with a stated long-run frequency; a p-value measures how surprising the data are under the null hypothesis. Regression fits relationships between variables.",
+        "Вывод оценивает параметры и проверяет гипотезы по выборкам. Доверительный интервал накрывает истинное значение с заявленной частотой в долгосрочной перспективе; p-значение измеряет, насколько данные неожиданны при нулевой гипотезе. Регрессия подгоняет связи между переменными.",
+      ),
+      formula(
+        "\\bar{x} \\pm z_{\\alpha/2}\\frac{\\sigma}{\\sqrt{n}}, \\qquad \\hat{\\beta} = \\frac{\\mathrm{Cov}(x,y)}{\\mathrm{Var}(x)}",
+        "x̄ ± z·σ/√n;   β̂ = Cov(x,y)/Var(x)",
+        "Confidence interval (known σ); least-squares slope",
+        "Доверительный интервал (известна σ); наклон МНК",
+      ),
+      note(
+        "A p-value is not the probability that the null hypothesis is true — a common and consequential misreading.",
+        "p-значение — не вероятность истинности нулевой гипотезы: частое и важное заблуждение.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -129,6 +157,15 @@ export const probabilityStatistics: Section = {
       "3/10",
       "P(first red) = 3/5; then 2 red remain out of 4: P(second red | first red) = 2/4. Multiply: (3/5)·(2/4) = 3/10.",
       "P(первый красный) = 3/5; затем осталось 2 красных из 4: P(второй красный | первый красный) = 2/4. Перемножаем: (3/5)·(2/4) = 3/10.",
+    ),
+    prob(
+      "p6", "medium",
+      "A population has σ = 10. For samples of size n = 100, what is the standard error of the mean?",
+      "Генеральная совокупность имеет σ = 10. Для выборок объёма n = 100 какова стандартная ошибка среднего?",
+      "1",
+      "1",
+      "SE = σ/√n = 10/10 = 1. By the CLT, sample means are approximately N(μ, 1).",
+      "SE = σ/√n = 10/10 = 1. По ЦПТ выборочные средние приблизительно N(μ, 1).",
     ),
   ],
 };

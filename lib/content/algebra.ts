@@ -93,6 +93,28 @@ export const algebra: Section = {
         "Логарифм определён только для положительных аргументов: logₐx требует x > 0, a > 0, a ≠ 1. При решении логарифмических уравнений всегда проверяйте область допустимых значений.",
       ),
     ]),
+    topic("inequalities", "Inequalities", "Неравенства", [
+      p(
+        "Inequalities compare quantities and are solved much like equations, with one twist: multiplying or dividing by a negative number reverses the sign. Classical inequalities bound expressions from below or above.",
+        "Неравенства сравнивают величины и решаются почти как уравнения, с одной особенностью: умножение или деление на отрицательное число меняет знак. Классические неравенства оценивают выражения снизу или сверху.",
+      ),
+      formula(
+        "\\frac{a+b}{2} \\ge \\sqrt{ab} \\quad (a,b \\ge 0)",
+        "(a + b)/2 ≥ √(ab)   (a, b ≥ 0)",
+        "AM–GM inequality",
+        "Неравенство о средних (AM–GM)",
+      ),
+      formula(
+        "(a_1b_1 + a_2b_2)^2 \\le (a_1^2 + a_2^2)(b_1^2 + b_2^2)",
+        "(a₁b₁ + a₂b₂)² ≤ (a₁² + a₂²)(b₁² + b₂²)",
+        "Cauchy–Schwarz inequality",
+        "Неравенство Коши–Буняковского",
+      ),
+      note(
+        "Triangle inequality: |a + b| ≤ |a| + |b| — the absolute value of a sum never exceeds the sum of absolute values.",
+        "Неравенство треугольника: |a + b| ≤ |a| + |b| — модуль суммы не превосходит суммы модулей.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -139,6 +161,15 @@ export const algebra: Section = {
       "x = 4",
       "Domain: x > 2. Combine: log₂(x(x − 2)) = 3, so x² − 2x = 8, i.e. x² − 2x − 8 = 0. Roots are x = 4 and x = −2; only x = 4 lies in the domain.",
       "ОДЗ: x > 2. Объединим: log₂(x(x − 2)) = 3, значит x² − 2x = 8, т.е. x² − 2x − 8 = 0. Корни x = 4 и x = −2; только x = 4 входит в ОДЗ.",
+    ),
+    prob(
+      "a6", "medium",
+      "Solve the inequality |2x − 3| < 5.",
+      "Решите неравенство |2x − 3| < 5.",
+      "−1 < x < 4",
+      "−1 < x < 4",
+      "|2x − 3| < 5 means −5 < 2x − 3 < 5, so −2 < 2x < 8, giving −1 < x < 4.",
+      "|2x − 3| < 5 означает −5 < 2x − 3 < 5, значит −2 < 2x < 8, откуда −1 < x < 4.",
     ),
   ],
 };

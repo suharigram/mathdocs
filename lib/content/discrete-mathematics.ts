@@ -83,6 +83,24 @@ export const discreteMathematics: Section = {
         ["Step: add (n + 1) to n(n+1)/2 to get (n+1)(n+2)/2", "Шаг: прибавив (n + 1) к n(n+1)/2, получаем (n+1)(n+2)/2"],
       ),
     ]),
+    topic("recurrences", "Recurrences and Generating Functions", "Рекуррентности и производящие функции", [
+      p(
+        "Recurrences define sequences from previous terms. Linear recurrences with constant coefficients are solved via characteristic roots — the Fibonacci sequence grows like φⁿ. Generating functions encode sequences as power series, turning recurrences into algebra.",
+        "Рекуррентности задают последовательности через предыдущие члены. Линейные рекуррентности с постоянными коэффициентами решаются через характеристические корни — последовательность Фибоначчи растёт как φⁿ. Производящие функции кодируют последовательности степенными рядами, превращая рекуррентности в алгебру.",
+      ),
+      formula(
+        "F_n = F_{n-1} + F_{n-2}, \\qquad F_n = \\frac{\\varphi^n - \\psi^n}{\\sqrt{5}}",
+        "Fₙ = Fₙ₋₁ + Fₙ₋₂;   Fₙ = (φⁿ − ψⁿ)/√5",
+        "Fibonacci recurrence and Binet's formula (φ = (1+√5)/2)",
+        "Рекуррентность Фибоначчи и формула Бине (φ = (1+√5)/2)",
+      ),
+      formula(
+        "G(x) = \\sum_{n \\ge 0} a_n x^n",
+        "G(x) = Σ aₙxⁿ",
+        "Ordinary generating function",
+        "Обычная производящая функция",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -129,6 +147,15 @@ export const discreteMathematics: Section = {
       "648",
       "First digit: 9 choices (1–9). Second: 9 (0–9 except the first). Third: 8. Total: 9·9·8 = 648.",
       "Первая цифра: 9 вариантов (1–9). Вторая: 9 (0–9 кроме первой). Третья: 8. Итого: 9·9·8 = 648.",
+    ),
+    prob(
+      "d6", "medium",
+      "With F₀ = 0, F₁ = 1 and Fₙ = Fₙ₋₁ + Fₙ₋₂, find F₇.",
+      "При F₀ = 0, F₁ = 1 и Fₙ = Fₙ₋₁ + Fₙ₋₂ найдите F₇.",
+      "13",
+      "13",
+      "Sequence: 0, 1, 1, 2, 3, 5, 8, 13 — F₇ = 13.",
+      "Последовательность: 0, 1, 1, 2, 3, 5, 8, 13 — F₇ = 13.",
     ),
   ],
 };

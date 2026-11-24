@@ -79,6 +79,34 @@ export const linearAlgebra: Section = {
         "Для матрицы 2×2 собственные значения удовлетворяют уравнению λ² − (след A)·λ + det A = 0.",
       ),
     ]),
+    topic("vector-spaces", "Vector Spaces and Linear Maps", "Векторные пространства и линейные отображения", [
+      p(
+        "A vector space is a set closed under addition and scalar multiplication. A basis is a linearly independent spanning set; its size is the dimension. Linear maps preserve both operations and are represented by matrices once bases are chosen.",
+        "Векторное пространство — множество, замкнутое относительно сложения и умножения на скаляр. Базис — линейно независимая порождающая система; его размер — размерность. Линейные отображения сохраняют обе операции и представляются матрицами после выбора базисов.",
+      ),
+      formula(
+        "\\dim V = \\dim\\ker T + \\dim\\mathrm{im}\\,T",
+        "dim V = dim ker T + dim im T",
+        "Rank–nullity theorem",
+        "Теорема о ранге и дефекте",
+      ),
+    ]),
+    topic("tensors", "Tensors and Bilinear Forms", "Тензоры и билинейные формы", [
+      p(
+        "Bilinear forms generalize the dot product; tensors are multilinear objects whose components transform by fixed rules under change of basis. They are the language of continuum mechanics and relativity.",
+        "Билинейные формы обобщают скалярное произведение; тензоры — полилинейные объекты, компоненты которых преобразуются по фиксированным правилам при смене базиса. Это язык механики сплошных сред и теории относительности.",
+      ),
+      formula(
+        "T'_{ij} = \\sum_{k,l} a_{ik} a_{jl} T_{kl}",
+        "T′ᵢⱼ = Σ aᵢₖaⱼₗTₖₗ",
+        "Transformation law of a rank-2 tensor",
+        "Закон преобразования тензора ранга 2",
+      ),
+      note(
+        "The metric tensor gᵢⱼ measures lengths and angles; in relativity it encodes gravity itself.",
+        "Метрический тензор gᵢⱼ измеряет длины и углы; в теории относительности он кодирует саму гравитацию.",
+      ),
+    ]),
   ],
   problems: [
     prob(
@@ -125,6 +153,15 @@ export const linearAlgebra: Section = {
       "λ = 3 и λ = 1",
       "det(A − λI) = (2 − λ)² − 1 = 0, so 2 − λ = ±1, giving λ = 3 or λ = 1. Eigenvectors: (1, 1) for λ = 3 and (1, −1) for λ = 1.",
       "det(A − λI) = (2 − λ)² − 1 = 0, значит 2 − λ = ±1, откуда λ = 3 или λ = 1. Собственные векторы: (1, 1) для λ = 3 и (1, −1) для λ = 1.",
+    ),
+    prob(
+      "l6", "medium",
+      "What is the dimension of the vector space of all 2×2 real matrices?",
+      "Какова размерность пространства всех вещественных матриц 2×2?",
+      "4",
+      "4",
+      "The four matrix units E₁₁, E₁₂, E₂₁, E₂₂ form a basis; each entry is a free parameter.",
+      "Четыре матричные единицы E₁₁, E₁₂, E₂₁, E₂₂ образуют базис; каждый элемент — свободный параметр.",
     ),
   ],
 };
