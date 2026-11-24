@@ -94,6 +94,67 @@ export const geometry: Section = {
         ["Parabola: y = ax² (focus-directrix property)", "Парабола: y = ax² (свойство фокуса и директрисы)"],
       ),
     ]),
+    topic("lines-angles", "Lines and Angles", "Прямые и углы", [
+      p(
+        "Complementary angles sum to 90°, supplementary to 180°. Vertical angles are equal. A transversal across parallel lines creates equal corresponding and alternate angles.",
+        "Дополнительные углы дают 90°, смежные — 180°. Вертикальные углы равны. Секущая параллельных прямых создаёт равные соответственные и накрест лежащие углы.",
+      ),
+      list(
+        ["Vertical angles: equal", "Вертикальные углы: равны"],
+        ["Parallel lines: corresponding and alternate angles equal", "Параллельные прямые: соответственные и накрест лежащие равны"],
+        ["Co-interior angles sum to 180°", "Односторонние углы дают 180°"],
+      ),
+    ]),
+    topic("polygons-quadrilaterals", "Polygons and Quadrilaterals", "Многоугольники и четырёхугольники", [
+      p(
+        "An n-gon's interior angles sum to (n − 2)·180°. Parallelograms have equal opposite sides and angles; rectangles add right angles; rhombi add equal sides; squares have both. A trapezoid has one pair of parallel sides.",
+        "Сумма внутренних углов n-угольника равна (n − 2)·180°. У параллелограмма противоположные стороны и углы равны; прямоугольник добавляет прямые углы; ромб — равные стороны; квадрат — и то и другое. У трапеции одна пара параллельных сторон.",
+      ),
+      formula(
+        "S_{\\text{interior}} = (n - 2) \\cdot 180^\\circ",
+        "Сумма углов = (n − 2)·180°",
+      ),
+    ]),
+    topic("similarity-congruence", "Congruence and Similarity", "Равенство и подобие", [
+      p(
+        "Congruent figures match exactly (SSS, SAS, ASA criteria). Similar figures have equal angles and proportional sides (AA suffices for triangles). A scale factor k multiplies lengths by k and areas by k².",
+        "Равные фигуры совпадают точно (признаки SSS, SAS, ASA). Подобные имеют равные углы и пропорциональные стороны (для треугольников достаточно AA). Коэффициент k умножает длины на k, площади — на k².",
+      ),
+      formula(
+        "\\frac{a_1}{a_2} = \\frac{b_1}{b_2} = k, \\qquad \\frac{S_1}{S_2} = k^2",
+        "a₁/a₂ = b₁/b₂ = k;   S₁/S₂ = k²",
+      ),
+    ]),
+    topic("circle-theorems", "Circle Theorems", "Теоремы об окружности", [
+      p(
+        "An inscribed angle is half the central angle subtending the same arc; angles in a semicircle are right. A tangent is perpendicular to the radius at the contact point. Intersecting chords balance products of segments.",
+        "Вписанный угол равен половине центрального, опирающегося на ту же дугу; угол, опирающийся на диаметр, прямой. Касательная перпендикулярна радиусу в точке касания. Пересекающиеся хорды балансируют произведения отрезков.",
+      ),
+      formula(
+        "\\angle_{\\text{inscribed}} = \\tfrac{1}{2}\\,\\text{arc}, \\qquad PA \\cdot PB = PC \\cdot PD",
+        "вписанный угол = ½·дуга;   PA·PB = PC·PD",
+      ),
+    ]),
+    topic("transformations", "Transformations and Symmetry", "Преобразования и симметрия", [
+      p(
+        "Translations, rotations, and reflections are isometries — they preserve distances and angles. Dilations scale. A figure's symmetries form a group: an equilateral triangle has 6, a square 8.",
+        "Параллельный перенос, поворот и отражение — изометрии: сохраняют расстояния и углы. Гомотетия масштабирует. Симметрии фигуры образуют группу: у равностороннего треугольника их 6, у квадрата 8.",
+      ),
+      note(
+        "Composition of two reflections is a rotation (intersecting mirrors) or a translation (parallel mirrors).",
+        "Композиция двух отражений — поворот (пересекающиеся зеркала) или перенос (параллельные зеркала).",
+      ),
+    ]),
+    topic("constructions", "Geometric Constructions", "Геометрические построения", [
+      p(
+        "Compass and straightedge build bisectors, perpendiculars, and regular polygons from axioms. Some classical tasks are provably impossible: trisecting an arbitrary angle, doubling the cube, squaring the circle.",
+        "Циркуль и линейка строят биссектрисы, перпендикуляры и правильные многоугольники из аксиом. Некоторые классические задачи доказуемо невозможны: трисекция произвольного угла, удвоение куба, квадратура круга.",
+      ),
+      note(
+        "Impossibility follows from field theory: constructible numbers lie in towers of quadratic extensions (see Abstract Algebra).",
+        "Невозможность следует из теории полей: построимые числа лежат в башнях квадратичных расширений (см. Абстрактную алгебру).",
+      ),
+    ]),
   ],
   problems: [
     prob(

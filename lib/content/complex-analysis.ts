@@ -65,6 +65,58 @@ export const complexAnalysis: Section = {
         "Теорема о вычетах",
       ),
     ]),
+    topic("elementary-functions", "Elementary Complex Functions and Branches", "Элементарные комплексные функции и ветви", [
+      p(
+        "exp is periodic with period 2πi; log is multivalued, log z = ln|z| + i(arg z + 2πk). Branch cuts make single-valued branches; z^a = e^{a log z} inherits the ambiguity.",
+        "exp периодична с периодом 2πi; log многозначен, log z = ln|z| + i(arg z + 2πk). Разрезы задают однозначные ветви; z^a = e^{a log z} наследует неоднозначность.",
+      ),
+      formula(
+        "\\log z = \\ln|z| + i\\,\\arg z",
+        "log z = ln|z| + i·arg z",
+      ),
+    ]),
+    topic("laurent-singularities", "Laurent Series and Singularities", "Ряды Лорана и особенности", [
+      p(
+        "Laurent series include negative powers and converge on annuli. Isolated singularities classify by principal part: removable (none), pole (finite), essential (infinite). Casorati–Weierstrass and Picard describe essential wildness.",
+        "Ряды Лорана включают отрицательные степени и сходятся в кольцах. Изолированные особенности классифицируются главной частью: устранимая (нет), полюс (конечная), существенная (бесконечная). Казорати–Вейерштрасс и Пикар описывают буйство существенных.",
+      ),
+      formula(
+        "f(z) = \\sum_{n=-\\infty}^{\\infty} a_n (z - a)^n",
+        "f(z) = Σ aₙ(z − a)ⁿ,   n от −∞ до ∞",
+      ),
+    ]),
+    topic("conformal", "Conformal Maps", "Конформные отображения", [
+      p(
+        "Analytic functions with nonzero derivative preserve angles. Möbius maps send circles/lines to circles/lines; the Riemann mapping theorem says every proper simply connected domain is conformally the disk.",
+        "Аналитические функции с ненулевой производной сохраняют углы. Дробно-линейные отображения переводят окружности/прямые в окружности/прямые; теорема Римана утверждает, что всякая собственная односвязная область конформно эквивалентна кругу.",
+      ),
+      formula(
+        "w = \\frac{az + b}{cz + d}, \\qquad ad - bc \\neq 0",
+        "w = (az + b)/(cz + d);   ad − bc ≠ 0",
+        "Möbius transformation",
+        "Дробно-линейное отображение",
+      ),
+    ]),
+    topic("argument-rouche", "Argument Principle and Rouché", "Принцип аргумента и теорема Руше", [
+      p(
+        "The argument principle counts zeros minus poles via the winding of f along a contour. Rouché: if |g| < |f| on the boundary, f and f + g have the same zero count inside — yielding the fundamental theorem of algebra.",
+        "Принцип аргумента считает нули минус полюса через намотку f вдоль контура. Руше: если |g| < |f| на границе, f и f + g имеют одинаковое число нулей внутри — что даёт основную теорему алгебры.",
+      ),
+      formula(
+        "\\frac{1}{2\\pi i}\\oint \\frac{f'}{f}\\,dz = Z - P",
+        "(1/2πi)∮ f′/f dz = Z − P",
+      ),
+    ]),
+    topic("harmonic", "Harmonic Functions", "Гармонические функции", [
+      p(
+        "Real and imaginary parts of analytic functions are harmonic (Δu = 0), and every harmonic function on a simply connected domain has a harmonic conjugate. Mean value property and maximum principle follow.",
+        "Действительная и мнимая части аналитических функций гармонические (Δu = 0), и у каждой гармонической функции в односвязной области есть гармонически сопряжённая. Следуют свойство среднего и принцип максимума.",
+      ),
+      formula(
+        "\\Delta u = 0, \\qquad f = u + iv \\text{ analytic}",
+        "Δu = 0;   f = u + iv аналитична",
+      ),
+    ]),
   ],
   problems: [
     prob(

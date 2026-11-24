@@ -67,6 +67,46 @@ export const multivariableCalculus: Section = {
         "Для полярных координат x = r cos θ, y = r sin θ якобиан равен r.",
       ),
     ]),
+    topic("limits-continuity", "Limits and Continuity in Several Variables", "Пределы и непрерывность нескольких переменных", [
+      p(
+        "A limit must agree along every path of approach — two paths giving different values prove no limit exists. Continuity means the limit equals the function value.",
+        "Предел должен совпадать по всем путям приближения — два пути с разными значениями доказывают отсутствие предела. Непрерывность означает равенство предела значению функции.",
+      ),
+      note(
+        "f(x,y) = xy/(x² + y²) has no limit at the origin: along y = x it is 1/2, along y = 0 it is 0.",
+        "f(x,y) = xy/(x² + y²) не имеет предела в начале координат: вдоль y = x он 1/2, вдоль y = 0 — 0.",
+      ),
+    ]),
+    topic("chain-rule", "The Multivariable Chain Rule", "Цепное правило нескольких переменных", [
+      p(
+        "When variables depend on parameters, derivatives add over all paths of dependence — a tree diagram organizes the terms.",
+        "Когда переменные зависят от параметров, производные складываются по всем путям зависимости — древовидная схема упорядочивает слагаемые.",
+      ),
+      formula(
+        "\\frac{dz}{dt} = \\frac{\\partial z}{\\partial x}\\frac{dx}{dt} + \\frac{\\partial z}{\\partial y}\\frac{dy}{dt}",
+        "dz/dt = (∂z/∂x)(dx/dt) + (∂z/∂y)(dy/dt)",
+      ),
+    ]),
+    topic("extrema", "Local Extrema and the Second Derivative Test", "Локальные экстремумы и тест второй производной", [
+      p(
+        "Critical points satisfy ∇f = 0. The Hessian determinant D = fₓₓfᵧᵧ − fₓᵧ² classifies them: D > 0 with fₓₓ > 0 gives a minimum, D > 0 with fₓₓ < 0 a maximum, D < 0 a saddle.",
+        "Критические точки удовлетворяют ∇f = 0. Определитель гессиана D = fₓₓfᵧᵧ − fₓᵧ² классифицирует их: D > 0 и fₓₓ > 0 — минимум, D > 0 и fₓₓ < 0 — максимум, D < 0 — седло.",
+      ),
+      formula(
+        "D = f_{xx}f_{yy} - f_{xy}^2",
+        "D = fₓₓfᵧᵧ − fₓᵧ²",
+      ),
+    ]),
+    topic("cylindrical-spherical", "Cylindrical and Spherical Coordinates", "Цилиндрические и сферические координаты", [
+      p(
+        "Cylindrical coordinates (r, θ, z) suit axial symmetry; spherical (ρ, θ, φ) suit radial symmetry. Volume elements gain Jacobian factors r and ρ² sin φ.",
+        "Цилиндрические координаты (r, θ, z) подходят для осевой симметрии; сферические (ρ, θ, φ) — для радиальной. Элементы объёма получают якобианы r и ρ² sin φ.",
+      ),
+      formula(
+        "dV = r\\,dr\\,d\\theta\\,dz, \\qquad dV = \\rho^2\\sin\\varphi\\,d\\rho\\,d\\varphi\\,d\\theta",
+        "dV = r dr dθ dz;   dV = ρ²sin φ dρ dφ dθ",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -141,6 +141,68 @@ export const physics: Section = {
         "γ = 1/√(1 − v²/c²);   Δt′ = γΔt;   E = mc²",
       ),
     ]),
+    topic("statics-rotation", "Statics, Torque, and Rotation", "Статика, момент и вращение", [
+      p(
+        "Equilibrium requires zero net force and zero net torque. Rotational dynamics mirrors linear: torque = Iα, angular momentum L = Iω is conserved without external torque.",
+        "Равновесие требует нулевой равнодействующей силы и нулевого момента. Динамика вращения зеркальна линейной: момент = Iα, момент импульса L = Iω сохраняется без внешнего момента.",
+      ),
+      formula(
+        "\\tau = rF\\sin\\theta, \\qquad \\tau = I\\alpha, \\qquad L = I\\omega",
+        "τ = rF·sin θ;   τ = Iα;   L = Iω",
+      ),
+    ]),
+    topic("circular-gravitation", "Circular Motion and Gravitation", "Круговое движение и тяготение", [
+      p(
+        "Circular motion needs centripetal acceleration v²/r. Newton's gravitation gives orbits: Kepler's laws follow from the inverse-square force; escape speed is √(2GM/R).",
+        "Круговое движение требует центростремительного ускорения v²/r. Тяготение Ньютона даёт орбиты: законы Кеплера следуют из обратно-квадратичной силы; вторая космическая скорость √(2GM/R).",
+      ),
+      formula(
+        "F = G\\frac{m_1 m_2}{r^2}, \\qquad a_c = \\frac{v^2}{r}",
+        "F = Gm₁m₂/r²;   a(ц) = v²/r",
+      ),
+    ]),
+    topic("oscillations", "Oscillations and Resonance", "Колебания и резонанс", [
+      p(
+        "A spring obeys x″ = −(k/m)x with period 2π√(m/k); a small-angle pendulum 2π√(L/g). Damping decays oscillations; driving near the natural frequency produces resonance.",
+        "Пружина подчиняется x″ = −(k/m)x с периодом 2π√(m/k); маятник при малых углах — 2π√(L/g). Демпфирование гасит колебания; возбуждение вблизи собственной частоты даёт резонанс.",
+      ),
+      formula(
+        "T_{\\text{spring}} = 2\\pi\\sqrt{m/k}, \\qquad T_{\\text{pend}} = 2\\pi\\sqrt{L/g}",
+        "T(пружины) = 2π√(m/k);   T(маятника) = 2π√(L/g)",
+      ),
+    ]),
+    topic("fluids", "Fluid Mechanics", "Механика жидкостей", [
+      p(
+        "Pressure grows with depth: p = p₀ + ρgh. Pascal transmits pressure; Archimedes' buoyancy equals displaced weight. Bernoulli links speed and pressure along a streamline.",
+        "Давление растёт с глубиной: p = p₀ + ρgh. Паскаль передаёт давление; архимедова сила равна весу вытесненной жидкости. Бернулли связывает скорость и давление вдоль линии тока.",
+      ),
+      formula(
+        "p + \\tfrac{1}{2}\\rho v^2 + \\rho gh = \\text{const}",
+        "p + ½ρv² + ρgh = const",
+        "Bernoulli's equation",
+        "Уравнение Бернулли",
+      ),
+    ]),
+    topic("circuits-magnetism", "Circuits, Capacitors, and Induction", "Цепи, конденсаторы и индукция", [
+      p(
+        "Kirchhoff's laws conserve charge and energy in circuits; capacitors store charge Q = CV, inductors oppose current change. Faraday: changing magnetic flux induces EMF; Lorentz force acts on moving charges.",
+        "Законы Кирхгофа сохраняют заряд и энергию в цепях; конденсаторы хранят заряд Q = CV, индуктивности противятся изменению тока. Фарадей: изменение магнитного потока индуцирует ЭДС; сила Лоренца действует на движущиеся заряды.",
+      ),
+      formula(
+        "Q = CV, \\qquad \\mathcal{E} = -\\frac{d\\Phi_B}{dt}, \\qquad \\mathbf{F} = q(\\mathbf{E} + \\mathbf{v}\\times\\mathbf{B})",
+        "Q = CV;   ЭДС = −dΦ/dt;   F = q(E + v × B)",
+      ),
+    ]),
+    topic("nuclear-modern", "Modern and Nuclear Physics", "Современная и ядерная физика", [
+      p(
+        "The photoelectric effect proved light quanta; Bohr quantized atomic orbits. Radioactive decay is exponential with half-life; fission and fusion release binding energy per E = mc².",
+        "Фотоэффект доказал кванты света; Бор квантовал атомные орбиты. Радиоактивный распад экспоненциален с периодом полураспада; деление и синтез высвобождают энергию связи по E = mc².",
+      ),
+      formula(
+        "N(t) = N_0\\,2^{-t/t_{1/2}}, \\qquad E = hf \\text{ (photon)}",
+        "N(t) = N₀·2^(−t/t½);   E = hf (фотон)",
+      ),
+    ]),
   ],
   problems: [
     prob(

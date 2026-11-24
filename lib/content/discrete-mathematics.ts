@@ -101,6 +101,58 @@ export const discreteMathematics: Section = {
         "Обычная производящая функция",
       ),
     ]),
+    topic("relations", "Relations and Orders", "Отношения и порядки", [
+      p(
+        "A relation is a set of pairs. Equivalence relations (reflexive, symmetric, transitive) partition sets into classes; partial orders (reflexive, antisymmetric, transitive) organize hierarchies — divisibility, subsets, precedence.",
+        "Отношение — множество пар. Отношения эквивалентности (рефлексивные, симметричные, транзитивные) разбивают множества на классы; частичные порядки (рефлексивные, антисимметричные, транзитивные) организуют иерархии — делимость, подмножества, предшествование.",
+      ),
+      note(
+        "Congruence mod n is an equivalence relation; its classes are exactly the residues Zₙ.",
+        "Сравнение по модулю n — отношение эквивалентности; его классы — в точности вычеты Zₙ.",
+      ),
+    ]),
+    topic("functions-pigeonhole", "Functions and the Pigeonhole Principle", "Функции и принцип Дирихле", [
+      p(
+        "Injections preserve distinctness, surjections cover the target, bijections pair perfectly. The pigeonhole principle: n + 1 objects in n boxes force a shared box — simple yet devastating in proofs.",
+        "Инъекции сохраняют различие, сюръекции покрывают цель, биекции спаривают идеально. Принцип Дирихле: n + 1 объект в n ящиках вынуждает общий ящик — прост, но сокрушителен в доказательствах.",
+      ),
+      formula(
+        "|A| > |B| \\;\\Rightarrow\\; \\text{no injection } A \\to B",
+        "|A| > |B|  ⇒  нет инъекции A → B",
+      ),
+    ]),
+    topic("boolean-algebra", "Boolean Algebra and Circuits", "Булева алгебра и схемы", [
+      p(
+        "Boolean algebra manipulates 0/1 with AND, OR, NOT; every expression has a truth table and a logic-circuit realization. Simplification (Karnaugh maps) minimizes hardware.",
+        "Булева алгебра оперирует 0/1 через И, ИЛИ, НЕ; каждое выражение имеет таблицу истинности и реализацию логической схемой. Упрощение (карты Карно) минимизирует аппаратуру.",
+      ),
+      formula(
+        "A \\land (B \\lor C) = (A \\land B) \\lor (A \\land C)",
+        "A ∧ (B ∨ C) = (A ∧ B) ∨ (A ∧ C)",
+        "Distributivity",
+        "Дистрибутивность",
+      ),
+    ]),
+    topic("automata", "Automata and Formal Languages", "Автоматы и формальные языки", [
+      p(
+        "Finite automata recognize regular languages; pushdown automata recognize context-free ones; Turing machines recognize the recursively enumerable. The Chomsky hierarchy organizes grammar power.",
+        "Конечные автоматы распознают регулярные языки; магазинные — контекстно-свободные; машины Тьюринга — рекурсивно перечислимые. Иерархия Хомского упорядочивает силу грамматик.",
+      ),
+      note(
+        "Regular expressions, lexical analyzers, and protocol validators are finite automata in production.",
+        "Регулярные выражения, лексические анализаторы и валидаторы протоколов — конечные автоматы в продакшене.",
+      ),
+    ]),
+    topic("complexity", "Algorithms and Complexity", "Алгоритмы и сложность", [
+      p(
+        "Big-O describes growth: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ). P vs NP asks whether checking a solution quickly implies finding one quickly — the central open problem of computer science.",
+        "Big-O описывает рост: O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ). P против NP спрашивает, влечёт ли быстрая проверка решения быстрое его нахождение — центральная открытая проблема информатики.",
+      ),
+      formula(
+        "T(n) = O(f(n)) \\;\\Leftrightarrow\\; T(n) \\le C f(n) \\text{ for large } n",
+        "T(n) = O(f(n))  ⇔  T(n) ≤ C·f(n) при больших n",
+      ),
+    ]),
   ],
   problems: [
     prob(

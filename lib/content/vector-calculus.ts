@@ -71,6 +71,28 @@ export const vectorCalculus: Section = {
         "Все три теоремы — одна идея: интеграл производной по области равен поведению поля на границе.",
       ),
     ]),
+    topic("parametrizations", "Parametrized Curves and Surfaces", "Параметризованные кривые и поверхности", [
+      p(
+        "Curves are r(t); surfaces are r(u,v). Tangent vectors come from partial derivatives, and the normal is their cross product — the geometry behind line and surface integrals.",
+        "Кривые — r(t); поверхности — r(u,v). Касательные векторы получаются частными производными, нормаль — их векторным произведением; это геометрия, стоящая за криволинейными и поверхностными интегралами.",
+      ),
+      formula(
+        "\\mathbf{n} = \\mathbf{r}_u \\times \\mathbf{r}_v, \\qquad dS = |\\mathbf{r}_u \\times \\mathbf{r}_v|\\,du\\,dv",
+        "n = rᵤ × rᵥ;   dS = |rᵤ × rᵥ| du dv",
+      ),
+    ]),
+    topic("maxwell", "Fields in Physics: Maxwell's Equations", "Поля в физике: уравнения Максвелла", [
+      p(
+        "Vector calculus is the language of electromagnetism: divergence of E gives charge density, curl of E gives changing magnetic flux, and so on. The four Maxwell equations unify electricity, magnetism, and light.",
+        "Векторный анализ — язык электромагнетизма: дивергенция E даёт плотность заряда, ротор E — изменение магнитного потока, и так далее. Четыре уравнения Максвелла объединяют электричество, магнетизм и свет.",
+      ),
+      formula(
+        "\\nabla\\cdot\\mathbf{E} = \\rho/\\varepsilon_0, \\quad \\nabla\\times\\mathbf{E} = -\\frac{\\partial\\mathbf{B}}{\\partial t}",
+        "div E = ρ/ε₀;   rot E = −∂B/∂t",
+        "Two of Maxwell's equations (differential form)",
+        "Два из уравнений Максвелла (дифференциальная форма)",
+      ),
+    ]),
   ],
   problems: [
     prob(

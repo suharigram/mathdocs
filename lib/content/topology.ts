@@ -57,6 +57,56 @@ export const topology: Section = {
         "Теорема Гаусса–Бонне связывает полную кривизну с χ: геометрия и топология — два взгляда на один инвариант.",
       ),
     ]),
+    topic("separation-metrization", "Separation Axioms and Metrizability", "Аксиомы отделимости и метризуемость", [
+      p(
+        "Hausdorff (T₂) spaces separate points by neighborhoods; normal spaces separate closed sets (Urysohn's lemma). Urysohn's metrization theorem: regular + second-countable ⇒ metrizable.",
+        "Хаусдорфовы (T₂) пространства разделяют точки окрестностями; нормальные разделяют замкнутые множества (лемма Урысона). Теорема Урысона о метризуемости: регулярность + вторая счётность ⇒ метризуемость.",
+      ),
+      note(
+        "Compact Hausdorff spaces are normal; continuous bijections from compact to Hausdorff are homeomorphisms.",
+        "Компактные хаусдорфовы пространства нормальны; непрерывные биекции из компакта в хаусдорфово — гомеоморфизмы.",
+      ),
+    ]),
+    topic("product-quotient", "Product and Quotient Topologies", "Произведения и фактортопологии", [
+      p(
+        "The product topology is the coarsest making projections continuous (Tychonoff: products of compacta are compact). Quotient topologies glue points — building circles from intervals, tori from squares, Möbius bands with a twist.",
+        "Топология произведения — наименьшая, делающая проекции непрерывными (Тихонов: произведения компактов компактны). Фактортопологии склеивают точки — строя окружности из отрезков, торы из квадратов, ленты Мёбиуса с перекрутом.",
+      ),
+      formula(
+        "S^1 = [0,1] / (0 \\sim 1), \\qquad T^2 = S^1 \\times S^1",
+        "S¹ = [0,1]/(0 ∼ 1);   T² = S¹ × S¹",
+      ),
+    ]),
+    topic("manifolds", "Topological Manifolds", "Топологические многообразия", [
+      p(
+        "An n-manifold is locally Euclidean, Hausdorff, second-countable. Surfaces classify by orientability and genus; in dimension 3 the Poincaré conjecture (Perelman) characterizes the sphere by π₁ = 0.",
+        "n-многообразие локально евклидово, хаусдорфово, второй счётности. Поверхности классифицируются ориентируемостью и родом; в размерности 3 гипотеза Пуанкаре (Перельман) характеризует сферу условием π₁ = 0.",
+      ),
+      note(
+        "Exotic R⁴ exists: smooth structures on R⁴ are uncountably many — unique to dimension 4.",
+        "Экзотические R⁴ существуют: гладких структур на R⁴ несчётно много — уникально для размерности 4.",
+      ),
+    ]),
+    topic("homotopy-homology", "Homotopy, Homology, Cohomology", "Гомотопии, гомологии, когомологии", [
+      p(
+        "Homotopy deforms maps continuously; homology groups Hₙ count n-dimensional holes algebraically; cohomology adds a ring structure (cup product). Mayer–Vietoris computes them by cutting spaces apart.",
+        "Гомотопия непрерывно деформирует отображения; группы гомологий Hₙ алгебраически считают n-мерные дырки; когомологии добавляют кольцевую структуру (cup-произведение). Майер–Вьеторис вычисляет их разрезанием пространств.",
+      ),
+      formula(
+        "H_0(S^1) = \\mathbb{Z}, \\quad H_1(S^1) = \\mathbb{Z}, \\quad H_n(T^2): \\mathbb{Z}, \\mathbb{Z}^2, \\mathbb{Z}",
+        "H₀(S¹) = Z;   H₁(S¹) = Z;   Hₙ(T²): Z, Z², Z",
+      ),
+    ]),
+    topic("knots", "Knot Theory", "Теория узлов", [
+      p(
+        "A knot is an embedded circle in 3-space, studied up to ambient isotopy. Jones and Alexander polynomials distinguish knots; knot theory connects to quantum field theory and DNA topology.",
+        "Узел — вложенная окружность в 3-пространство, изучаемая с точностью до изотопии. Полиномы Джонса и Александера различают узлы; теория узлов связана с квантовой теорией поля и топологией ДНК.",
+      ),
+      note(
+        "The trefoil is the simplest nontrivial knot; its Jones polynomial proves it is not the unknot.",
+        "Трилистник — простейший нетривиальный узел; его полином Джонса доказывает, что это не развязка.",
+      ),
+    ]),
   ],
   problems: [
     prob(

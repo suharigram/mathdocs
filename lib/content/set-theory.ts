@@ -59,6 +59,37 @@ export const setTheory: Section = {
         "Независимость означает, что ни CH, ни ¬CH нельзя доказать из ZFC (если ZFC непротиворечива).",
       ),
     ]),
+    topic("zfc-axioms", "The ZFC Axioms", "Аксиомы ZFC", [
+      p(
+        "ZFC builds sets safely: extensionality, pairing, union, power set, infinity, separation, replacement, foundation, and choice. Separation replaces naive comprehension, blocking Russell's paradox.",
+        "ZFC безопасно строит множества: экстенсиональность, пара, объединение, степень, бесконечность, выделение, подстановка, регулярность и выбор. Выделение заменяет наивное свёртывание, блокируя парадокс Рассела.",
+      ),
+      list(
+        ["Extensionality: same elements ⇒ same set", "Экстенсиональность: одни элементы ⇒ одно множество"],
+        ["Foundation: no set contains itself (no infinite ∈-chains)", "Регулярность: никакое множество не содержит себя (нет бесконечных ∈-цепей)"],
+        ["Replacement: images of sets under definable maps are sets", "Подстановка: образы множеств при определимых отображениях — множества"],
+      ),
+    ]),
+    topic("cardinal-arithmetic", "Cardinal Arithmetic", "Кардинальная арифметика", [
+      p(
+        "Infinite cardinals add and multiply by taking maxima: ℵ₀ + ℵ₀ = ℵ₀·ℵ₀ = ℵ₀. Exponentiation is wild: 2^{ℵ₀} is the continuum, and König's theorem constrains cofinalities.",
+        "Бесконечные кардиналы складываются и умножаются взятием максимума: ℵ₀ + ℵ₀ = ℵ₀·ℵ₀ = ℵ₀. Возведение в степень дико: 2^{ℵ₀} — континуум, теорема Кёнига ограничивает конфинальности.",
+      ),
+      formula(
+        "\\aleph_0 \\cdot \\aleph_0 = \\aleph_0, \\qquad 2^{\\aleph_0} = \\mathfrak{c}",
+        "ℵ₀·ℵ₀ = ℵ₀;   2^ℵ₀ = c (континуум)",
+      ),
+    ]),
+    topic("large-cardinals", "Beyond ZFC: Large Cardinals", "За пределами ZFC: большие кардиналы", [
+      p(
+        "Inaccessible, measurable, and supercompact cardinals are axioms of increasing strength, unprovable in ZFC. They calibrate consistency strength and organize modern set theory.",
+        "Недостижимые, измеримые и суперкомпактные кардиналы — аксиомы возрастающей силы, недоказуемые в ZFC. Они калибруют силу непротиворечивости и организуют современную теорию множеств.",
+      ),
+      note(
+        "Gödel's second theorem implies ZFC cannot prove the existence of a model of ZFC — large cardinals climb beyond.",
+        "Вторая теорема Гёделя влечёт, что ZFC не может доказать существование модели ZFC — большие кардиналы поднимаются выше.",
+      ),
+    ]),
   ],
   problems: [
     prob(

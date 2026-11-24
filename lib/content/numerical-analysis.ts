@@ -65,6 +65,50 @@ export const numericalAnalysis: Section = {
         "RK4 взвешивает четыре оценки наклона как 1:2:2:1 — рабочая лошадка научных вычислений.",
       ),
     ]),
+    topic("floating-point", "Floating Point and Error Analysis", "Плавающая точка и анализ погрешностей", [
+      p(
+        "Computers use finite precision: machine epsilon ≈ 2.2×10⁻¹⁶ in double. Rounding, cancellation, and conditioning amplify errors; a stable algorithm keeps them under control.",
+        "Компьютеры используют конечную точность: машинное эпсилон ≈ 2,2×10⁻¹⁶ в double. Округление, сокращение и обусловленность усиливают ошибки; устойчивый алгоритм держит их под контролем.",
+      ),
+      formula(
+        "\\mathrm{fl}(x) = x(1 + \\delta), \\quad |\\delta| \\le \\varepsilon_{\\text{mach}}",
+        "fl(x) = x(1 + δ);   |δ| ≤ ε(маш)",
+      ),
+    ]),
+    topic("linear-systems-numerics", "Numerical Linear Algebra", "Численная линейная алгебра", [
+      p(
+        "LU with pivoting solves Ax = b in O(n³); the condition number κ(A) = ‖A‖‖A⁻¹‖ predicts error amplification. Iterative methods (Jacobi, Gauss–Seidel, conjugate gradients) handle huge sparse systems.",
+        "LU с выбором ведущего элемента решает Ax = b за O(n³); число обусловленности κ(A) = ‖A‖‖A⁻¹‖ предсказывает усиление ошибки. Итерационные методы (Якоби, Гаусс–Зейдель, сопряжённые градиенты) разбирают огромные разреженные системы.",
+      ),
+      formula(
+        "\\kappa(A) = \\|A\\|\\,\\|A^{-1}\\|",
+        "κ(A) = ‖A‖·‖A⁻¹‖",
+      ),
+    ]),
+    topic("eigen-numerics", "Eigenvalue Algorithms", "Алгоритмы собственных значений", [
+      p(
+        "The power method finds the dominant eigenpair; the QR algorithm iterates QR factorizations to reveal the whole spectrum — the workhorse behind eig, SVD, and PageRank.",
+        "Степенной метод находит доминирующую собственную пару; QR-алгоритм итерирует QR-разложения, раскрывая весь спектр — рабочая лошадка eig, SVD и PageRank.",
+      ),
+      formula(
+        "A_k = Q_k R_k, \\qquad A_{k+1} = R_k Q_k",
+        "Aₖ = QₖRₖ;   Aₖ₊₁ = RₖQₖ",
+        "QR iteration",
+        "QR-итерация",
+      ),
+    ]),
+    topic("fft", "The Fast Fourier Transform", "Быстрое преобразование Фурье", [
+      p(
+        "The FFT computes the discrete Fourier transform in O(n log n) instead of O(n²) by divide-and-conquer on roots of unity — enabling signal processing, fast multiplication, and spectral PDE solvers.",
+        "БПФ вычисляет дискретное преобразование Фурье за O(n log n) вместо O(n²) разделяй-и-властвуй на корнях из единицы — обеспечивая обработку сигналов, быстрое умножение и спектральные решатели УрЧП.",
+      ),
+      formula(
+        "X_k = \\sum_{n=0}^{N-1} x_n\\,e^{-2\\pi i kn/N}",
+        "Xₖ = Σ xₙ·e^(−2πikn/N)",
+        "Discrete Fourier transform",
+        "Дискретное преобразование Фурье",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -62,6 +62,36 @@ export const pdes: Section = {
         "Граничные условия бывают трёх типов: Дирихле (значение), Неймана (нормальная производная), Робена (смешанное).",
       ),
     ]),
+    topic("first-order", "First-Order PDEs and Characteristics", "Уравнения первого порядка и характеристики", [
+      p(
+        "The transport equation uₜ + c·uₓ = 0 moves the initial profile at speed c. The method of characteristics reduces first-order PDEs to ODEs along characteristic curves.",
+        "Уравнение переноса uₜ + c·uₓ = 0 двигает начальный профиль со скоростью c. Метод характеристик сводит уравнения первого порядка к ОДУ вдоль характеристических кривых.",
+      ),
+      formula(
+        "u_t + c\\,u_x = 0 \\;\\Rightarrow\\; u(x,t) = f(x - ct)",
+        "uₜ + c·uₓ = 0  ⇒  u(x,t) = f(x − ct)",
+      ),
+    ]),
+    topic("well-posedness", "Boundary Conditions and Well-Posedness", "Граничные условия и корректность", [
+      p(
+        "A problem is well-posed (Hadamard) when a solution exists, is unique, and depends continuously on the data. Elliptic equations need boundary values; evolution equations need initial data plus boundary conditions.",
+        "Задача корректна (Адамар), если решение существует, единственно и непрерывно зависит от данных. Эллиптическим уравнениям нужны граничные значения; эволюционным — начальные данные плюс граничные условия.",
+      ),
+      note(
+        "The backward heat equation is ill-posed: tiny data errors blow up — diffusion cannot be uniquely reversed.",
+        "Обратное уравнение теплопроводности некорректно: малые ошибки данных взрываются — диффузию нельзя однозначно обратить.",
+      ),
+    ]),
+    topic("transforms-green", "Transform Methods and Green's Functions", "Методы преобразований и функции Грина", [
+      p(
+        "Fourier and Laplace transforms convert PDEs into ODEs or algebra. A Green's function is the response to a point source; superposition against it builds solutions for arbitrary sources.",
+        "Преобразования Фурье и Лапласа превращают УрЧП в ОДУ или алгебру. Функция Грина — отклик на точечный источник; суперпозиция с ней строит решения для произвольных источников.",
+      ),
+      formula(
+        "u(x) = \\int G(x, s)\\,f(s)\\,ds, \\qquad \\Delta G = \\delta",
+        "u(x) = ∫ G(x,s)f(s) ds;   ΔG = δ",
+      ),
+    ]),
   ],
   problems: [
     prob(

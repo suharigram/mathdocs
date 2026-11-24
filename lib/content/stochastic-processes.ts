@@ -57,6 +57,40 @@ export const stochasticProcesses: Section = {
         "Исчисление Ито распространяет дифференцирование на броуновские траектории; это двигатель математических финансов.",
       ),
     ]),
+    topic("birth-death-queues", "Birth–Death Processes and Queues", "Процессы гибели-размножения и очереди", [
+      p(
+        "Birth–death chains move only to neighboring states; detailed balance gives stationary laws. The M/M/1 queue has utilization ρ = λ/μ and mean queue length ρ/(1−ρ) — stability requires ρ < 1.",
+        "Цепи гибели-размножения ходят только в соседние состояния; детальное равновесие даёт стационарные законы. Очередь M/M/1 имеет загрузку ρ = λ/μ и среднюю длину ρ/(1−ρ) — устойчивость требует ρ < 1.",
+      ),
+      formula(
+        "L = \\frac{\\rho}{1 - \\rho}, \\qquad \\rho = \\lambda/\\mu",
+        "L = ρ/(1 − ρ);   ρ = λ/μ",
+        "M/M/1 mean number in system",
+        "M/M/1: среднее число заявок в системе",
+      ),
+    ]),
+    topic("renewal", "Renewal Processes", "Процессы восстановления", [
+      p(
+        "Renewal theory generalizes Poisson processes to arbitrary interarrival distributions. The elementary renewal theorem: N(t)/t → 1/mean; the inspection paradox explains why observed gaps look longer.",
+        "Теория восстановления обобщает процессы Пуассона на произвольные распределения интервалов. Элементарная теорема: N(t)/t → 1/среднее; парадокс инспекции объясняет, почему наблюдаемые интервалы кажутся длиннее.",
+      ),
+      formula(
+        "\\frac{N(t)}{t} \\to \\frac{1}{E[T]}",
+        "N(t)/t → 1/E[T]",
+      ),
+    ]),
+    topic("ito-sde", "Itô Calculus and SDEs", "Исчисление Ито и СДУ", [
+      p(
+        "Brownian paths have infinite variation, so ordinary calculus fails. Itô's lemma adds a second-order term: df(Bₜ) = f′dBₜ + ½f″dt. SDEs like dS = μS dt + σS dBₜ model noisy dynamics and underlie Black–Scholes.",
+        "Броуновские траектории имеют бесконечную вариацию, поэтому обычное исчисление не работает. Лемма Ито добавляет член второго порядка: df(Bₜ) = f′dBₜ + ½f″dt. СДУ вида dS = μS dt + σS dBₜ моделируют шумную динамику и лежат в основе Блэка–Шоулза.",
+      ),
+      formula(
+        "df(B_t) = f'(B_t)\\,dB_t + \\tfrac{1}{2}f''(B_t)\\,dt",
+        "df(Bₜ) = f′(Bₜ)dBₜ + ½f″(Bₜ)dt",
+        "Itô's lemma",
+        "Лемма Ито",
+      ),
+    ]),
   ],
   problems: [
     prob(

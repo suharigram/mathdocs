@@ -62,6 +62,70 @@ export const abstractAlgebra: Section = {
         "Первая теорема об изоморфизме",
       ),
     ]),
+    topic("group-actions", "Group Actions and Counting", "Действия групп и подсчёт", [
+      p(
+        "A group action moves a set around; orbits partition it and stabilizers measure symmetry. Burnside's lemma counts distinct configurations by averaging fixed points — necklaces up to rotation.",
+        "Действие группы перемещает множество; орбиты разбивают его, стабилизаторы измеряют симметрию. Лемма Бернсайда считает различные конфигурации усреднением неподвижных точек — ожерелья с точностью до поворота.",
+      ),
+      formula(
+        "|X/G| = \\frac{1}{|G|}\\sum_{g} |\\mathrm{Fix}(g)|",
+        "|X/G| = (1/|G|)·Σ |Fix(g)|",
+        "Burnside's lemma",
+        "Лемма Бернсайда",
+      ),
+    ]),
+    topic("sylow", "Sylow Theorems and Classification", "Теоремы Силова и классификация", [
+      p(
+        "Sylow's theorems guarantee subgroups of prime-power order and constrain their number — the main tool for classifying small finite groups. The classification of finite simple groups is one of mathematics' largest achievements.",
+        "Теоремы Силова гарантируют подгруппы примарного порядка и ограничивают их число — главный инструмент классификации малых конечных групп. Классификация конечных простых групп — одно из крупнейших достижений математики.",
+      ),
+      note(
+        "Every group of order p² is abelian; groups of order 15 are cyclic — Sylow counting proves both.",
+        "Всякая группа порядка p² абелева; группы порядка 15 циклические — силовский подсчёт доказывает оба факта.",
+      ),
+    ]),
+    topic("permutation-dihedral", "Permutation and Dihedral Groups", "Группы перестановок и диэдральные группы", [
+      p(
+        "Sₙ permutes n objects; every permutation splits into cycles, and parity splits Sₙ into Aₙ. The dihedral group Dₙ (2n elements) is the symmetry group of a regular n-gon: rotations and reflections.",
+        "Sₙ переставляет n объектов; каждая перестановка распадается в циклы, чётность делит Sₙ на Aₙ. Диэдральная группа Dₙ (2n элементов) — группа симметрий правильного n-угольника: повороты и отражения.",
+      ),
+      formula(
+        "D_n = \\langle r, s \\mid r^n = s^2 = e,\\ srs = r^{-1} \\rangle",
+        "Dₙ = ⟨r, s | rⁿ = s² = e, srs = r⁻¹⟩",
+      ),
+    ]),
+    topic("polynomial-irreducibility", "Polynomial Rings and Irreducibility", "Кольца многочленов и неприводимость", [
+      p(
+        "k[x] is a Euclidean domain: division, gcd, and unique factorization work. Eisenstein's criterion certifies irreducibility; over finite fields irreducible polynomials build field extensions.",
+        "k[x] — евклидово кольцо: работают деление, НОД и единственность разложения. Критерий Эйзенштейна удостоверяет неприводимость; над конечными полями неприводимые многочлены строят расширения полей.",
+      ),
+      note(
+        "Eisenstein: if a prime p divides all coefficients except the leading one, and p² does not divide the constant term, the polynomial is irreducible over Q.",
+        "Эйзенштейн: если простое p делит все коэффициенты кроме старшего, а p² не делит свободный член, многочлен неприводим над Q.",
+      ),
+    ]),
+    topic("galois", "Field Extensions and Galois Theory", "Расширения полей и теория Галуа", [
+      p(
+        "Adjoining roots builds field extensions; the Galois group of a polynomial permutes its roots. Solvability by radicals corresponds to solvability of the Galois group — proving the quintic has no general formula.",
+        "Присоединение корней строит расширения полей; группа Галуа многочлена переставляет его корни. Разрешимость в радикалах соответствует разрешимости группы Галуа — что доказывает отсутствие общей формулы для уравнений пятой степени.",
+      ),
+      formula(
+        "[L : K] = |\\mathrm{Gal}(L/K)| \\quad \\text{(Galois extension)}",
+        "[L : K] = |Gal(L/K)|   (расширение Галуа)",
+      ),
+    ]),
+    topic("lie-representations", "Lie Groups and Representations", "Группы Ли и представления", [
+      p(
+        "Lie groups are smooth symmetry groups (rotations SO(3), unitary matrices SU(n)); their Lie algebras capture infinitesimal symmetry. Representation theory realizes abstract groups as matrices, with characters as fingerprints.",
+        "Группы Ли — гладкие группы симметрий (вращения SO(3), унитарные матрицы SU(n)); их алгебры Ли ловят бесконечно малую симметрию. Теория представлений реализует абстрактные группы матрицами, характеры — их отпечатки.",
+      ),
+      formula(
+        "\\chi(g) = \\mathrm{tr}\\,\\rho(g)",
+        "χ(g) = tr ρ(g)",
+        "Character of a representation",
+        "Характер представления",
+      ),
+    ]),
   ],
   problems: [
     prob(

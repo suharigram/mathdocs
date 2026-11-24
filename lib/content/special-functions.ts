@@ -63,6 +63,40 @@ export const specialFunctions: Section = {
         "li(x) приближает π(x) — число простых ≤ x: теорема о распределении простых в действии.",
       ),
     ]),
+    topic("hypergeometric", "Hypergeometric Functions", "Гипергеометрические функции", [
+      p(
+        "The series ₂F₁(a,b;c;z) unifies most special functions: Legendre, Chebyshev, and many integrals are its specializations. It satisfies a second-order ODE with three regular singular points.",
+        "Ряд ₂F₁(a,b;c;z) объединяет большинство специальных функций: Лежандр, Чебышёв и многие интегралы — его специализации. Он удовлетворяет ОДУ второго порядка с тремя регулярными особыми точками.",
+      ),
+      formula(
+        "{}_2F_1(a,b;c;z) = \\sum_{n=0}^{\\infty}\\frac{(a)_n(b)_n}{(c)_n}\\frac{z^n}{n!}",
+        "₂F₁(a,b;c;z) = Σ (a)ₙ(b)ₙ/(c)ₙ · zⁿ/n!",
+        "(a)ₙ is the rising factorial",
+        "(a)ₙ — возрастающий факториал",
+      ),
+    ]),
+    topic("elliptic", "Elliptic Integrals and Functions", "Эллиптические интегралы и функции", [
+      p(
+        "Arc length of an ellipse leads to integrals that cannot be expressed elementarily. Inverting them gives doubly periodic elliptic functions (sn, cn, dn) — the pendulum's exact solution and the gateway to elliptic curves.",
+        "Длина дуги эллипса приводит к интегралам, не выражающимся элементарно. Их обращение даёт двоякопериодические эллиптические функции (sn, cn, dn) — точное решение маятника и ворота к эллиптическим кривым.",
+      ),
+      formula(
+        "E(\\varphi, k) = \\int_0^{\\varphi}\\sqrt{1 - k^2\\sin^2\\theta}\\,d\\theta",
+        "E(φ,k) = ∫₀^φ √(1 − k²sin²θ) dθ",
+        "Incomplete elliptic integral of the second kind",
+        "Неполный эллиптический интеграл второго рода",
+      ),
+    ]),
+    topic("airy", "Airy Functions and Turning Points", "Функции Эйри и точки поворота", [
+      p(
+        "Airy functions Ai, Bi solve y″ = xy — the universal local model near turning points in quantum mechanics and optics (WKB theory). Ai decays exponentially on one side and oscillates on the other.",
+        "Функции Эйри Ai, Bi решают y″ = xy — универсальная локальная модель вблизи точек поворота в квантовой механике и оптике (ВКБ-теория). Ai экспоненциально убывает с одной стороны и осциллирует с другой.",
+      ),
+      formula(
+        "y'' = xy, \\qquad \\mathrm{Ai}(x) = \\frac{1}{\\pi}\\int_0^{\\infty}\\cos\\Big(\\frac{t^3}{3} + xt\\Big)dt",
+        "y″ = xy;   Ai(x) = (1/π)∫₀^∞ cos(t³/3 + xt) dt",
+      ),
+    ]),
   ],
   problems: [
     prob(

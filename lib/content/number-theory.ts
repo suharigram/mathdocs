@@ -103,6 +103,50 @@ export const numberTheory: Section = {
         "Теорема Эйлера — именно причина работоспособности расшифрования RSA: ed ≡ 1 (mod φ(n)) восстанавливает сообщение.",
       ),
     ]),
+    topic("diophantine", "Diophantine Equations", "Диофантовы уравнения", [
+      p(
+        "Diophantine equations seek integer solutions. Linear ax + by = c is solvable exactly when gcd(a,b) | c. Pythagorean triples are parametrized by (m² − n², 2mn, m² + n²). Fermat's Last Theorem: xⁿ + yⁿ = zⁿ has no positive integer solutions for n > 2 (Wiles, 1995).",
+        "Диофантовы уравнения ищут целые решения. Линейное ax + by = c разрешимо ровно когда НОД(a,b) | c. Пифагоровы тройки параметризуются (m² − n², 2mn, m² + n²). Великая теорема Ферма: xⁿ + yⁿ = zⁿ не имеет положительных целых решений при n > 2 (Уайлс, 1995).",
+      ),
+      formula(
+        "ax + by = c \\text{ solvable} \\;\\Leftrightarrow\\; \\gcd(a,b) \\mid c",
+        "ax + by = c разрешимо  ⇔  НОД(a,b) | c",
+      ),
+    ]),
+    topic("quadratic-residues", "Quadratic Residues and Reciprocity", "Квадратичные вычеты и взаимность", [
+      p(
+        "a is a quadratic residue mod p when x² ≡ a (mod p) is solvable. The Legendre symbol records this; quadratic reciprocity relates (p/q) and (q/p) — Gauss's 'golden theorem'.",
+        "a — квадратичный вычет по модулю p, если x² ≡ a (mod p) разрешимо. Символ Лежандра фиксирует это; квадратичный закон взаимности связывает (p/q) и (q/p) — «золотая теорема» Гаусса.",
+      ),
+      formula(
+        "\\Big(\\frac{p}{q}\\Big)\\Big(\\frac{q}{p}\\Big) = (-1)^{\\frac{p-1}{2}\\cdot\\frac{q-1}{2}}",
+        "(p/q)(q/p) = (−1)^((p−1)/2·(q−1)/2)",
+        "Quadratic reciprocity (odd primes p, q)",
+        "Квадратичная взаимность (нечётные простые p, q)",
+      ),
+    ]),
+    topic("continued-fractions", "Continued Fractions", "Цепные дроби", [
+      p(
+        "Every real number expands as a continued fraction; rationals terminate, quadratic irrationals are periodic. Convergents give the best rational approximations — the engine behind Pell's equation and calendar design.",
+        "Каждое действительное число раскладывается в цепную дробь; рациональные обрываются, квадратичные иррациональности периодичны. Подходящие дроби дают наилучшие рациональные приближения — двигатель уравнения Пелля и построения календарей.",
+      ),
+      formula(
+        "\\sqrt{2} = [1; 2, 2, 2, \\ldots]",
+        "√2 = [1; 2, 2, 2, …]",
+      ),
+    ]),
+    topic("prime-distribution", "Distribution of Primes", "Распределение простых чисел", [
+      p(
+        "The prime number theorem: π(x) ~ x/ln x. Dirichlet: every arithmetic progression a, a+d, a+2d, … with gcd(a,d) = 1 contains infinitely many primes. Twin primes and Goldbach's conjecture remain open.",
+        "Теорема о распределении простых: π(x) ~ x/ln x. Дирихле: каждая арифметическая прогрессия a, a+d, a+2d, … с НОД(a,d) = 1 содержит бесконечно много простых. Близнецы и гипотеза Гольдбаха остаются открытыми.",
+      ),
+      formula(
+        "\\pi(x) \\sim \\frac{x}{\\ln x}",
+        "π(x) ~ x/ln x",
+        "Prime number theorem",
+        "Теорема о распределении простых",
+      ),
+    ]),
   ],
   problems: [
     prob(

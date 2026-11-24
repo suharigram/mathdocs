@@ -61,6 +61,48 @@ export const categoryTheory: Section = {
         "«Спрашивай не что есть объект, а как он отображается» — универсальные свойства заменяют поэлементные определения по всей математике.",
       ),
     ]),
+    topic("limits-colimits", "Limits and Colimits", "Пределы и копределы", [
+      p(
+        "Limits (products, equalizers, pullbacks) generalize 'best cones into a diagram'; colimits (coproducts, coequalizers, pushouts) glue diagrams together. Many constructions across mathematics are limits in disguise.",
+        "Пределы (произведения, уравнители, расслоённые произведения) обобщают «наилучшие конусы в диаграмму»; копределы (копроизведения, коуравнители, копроизведения склейки) склеивают диаграммы. Многие конструкции по всей математике — замаскированные пределы.",
+      ),
+      note(
+        "In Set: limit = subset of a product satisfying equations; colimit = disjoint union modulo identifications.",
+        "В Set: предел = подмножество произведения, удовлетворяющее уравнениям; копредел = дизъюнктное объединение по отождествлениям.",
+      ),
+    ]),
+    topic("adjunctions", "Adjunctions", "Сопряжения", [
+      p(
+        "F ⊣ G means maps F(A) → B correspond naturally to maps A → G(B). Free/forgetful pairs, products/exponentials, and quantifiers are adjunctions — 'the most important concept in category theory'.",
+        "F ⊣ G означает, что отображения F(A) → B естественно соответствуют отображениям A → G(B). Пары свободный/забывающий, произведение/экспонента и кванторы — сопряжения: «важнейшее понятие теории категорий».",
+      ),
+      formula(
+        "\\mathrm{Hom}(F A, B) \\cong \\mathrm{Hom}(A, G B)",
+        "Hom(FA, B) ≅ Hom(A, GB)",
+      ),
+    ]),
+    topic("monads", "Monads", "Монады", [
+      p(
+        "A monad is an endofunctor with unit and multiplication obeying coherence laws — abstractly, a monoid in the category of endofunctors. In programming, monads structure effects: maybe, list, state, IO.",
+        "Монада — эндофунктор с единицей и умножением, подчинёнными законам когерентности, — абстрактно моноид в категории эндофункторов. В программировании монады структурируют эффекты: maybe, список, состояние, IO.",
+      ),
+      formula(
+        "(T, \\eta: \\mathrm{Id} \\to T, \\mu: T^2 \\to T)",
+        "(T, η: Id → T, μ: T² → T)",
+      ),
+    ]),
+    topic("homological", "Homological Algebra", "Гомологическая алгебра", [
+      p(
+        "Chain complexes and exact sequences measure failure of exactness; derived functors Ext and Tor repair it. Homology and cohomology theories across mathematics are instances of this machinery.",
+        "Цепные комплексы и точные последовательности измеряют отказ точности; производные функторы Ext и Tor чинят его. Теории гомологий и когомологий по всей математике — экземпляры этой машинерии.",
+      ),
+      formula(
+        "H_n = \\ker d_n / \\mathrm{im}\\, d_{n+1}",
+        "Hₙ = ker dₙ / im dₙ₊₁",
+        "Homology of a chain complex",
+        "Гомологии цепного комплекса",
+      ),
+    ]),
   ],
   problems: [
     prob(

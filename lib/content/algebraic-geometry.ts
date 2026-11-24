@@ -57,6 +57,50 @@ export const algebraicGeometry: Section = {
         "Разрешение особенностей (Хиронака) заменяет любое многообразие гладким с помощью раздутий — краеугольный камень области.",
       ),
     ]),
+    topic("morphisms", "Morphisms and Rational Maps", "Морфизмы и рациональные отображения", [
+      p(
+        "Regular maps are polynomial in coordinates; rational maps are defined on dense open sets. Birational equivalence ignores lower-dimensional differences — the classification program of algebraic geometry.",
+        "Регулярные отображения полиномиальны в координатах; рациональные определены на плотных открытых множествах. Бирациональная эквивалентность игнорирует различия меньшей размерности — программа классификации алгебраической геометрии.",
+      ),
+      note(
+        "Blowing up a point replaces it by the projective line of directions — the basic birational surgery.",
+        "Раздутие точки заменяет её проективной прямой направлений — базовая бирациональная хирургия.",
+      ),
+    ]),
+    topic("sheaves-schemes", "Sheaves and Schemes", "Пучки и схемы", [
+      p(
+        "Sheaves track local data and its gluing; the structure sheaf turns a space into a ringed space. Schemes generalize varieties by allowing arbitrary commutative rings — nilpotents and arithmetic included (Grothendieck).",
+        "Пучки отслеживают локальные данные и их склейку; структурный пучок превращает пространство в окольцованное. Схемы обобщают многообразия, допуская произвольные коммутативные кольца — включая нильпотенты и арифметику (Гротендик).",
+      ),
+      formula(
+        "\\mathrm{Spec}\\,\\mathbb{Z} \\text{ is the final arithmetic scheme}",
+        "Spec Z — конечная арифметическая схема",
+      ),
+    ]),
+    topic("divisors-riemann-roch", "Divisors and Riemann–Roch", "Дивизоры и теорема Римана–Роха", [
+      p(
+        "Divisors record zeros and poles; line bundles organize them. Riemann–Roch computes the dimension of spaces of functions with prescribed poles: l(D) − l(K − D) = deg D + 1 − g on curves.",
+        "Дивизоры записывают нули и полюса; линейные расслоения их организуют. Римана–Роха вычисляет размерность пространств функций с заданными полюсами: l(D) − l(K − D) = deg D + 1 − g на кривых.",
+      ),
+      formula(
+        "l(D) - l(K - D) = \\deg D + 1 - g",
+        "l(D) − l(K − D) = deg D + 1 − g",
+        "Riemann–Roch for curves",
+        "Римана–Роха для кривых",
+      ),
+    ]),
+    topic("elliptic-curves", "Elliptic Curves", "Эллиптические кривые", [
+      p(
+        "Smooth cubic curves with a marked point form a group via the chord-tangent law. Over Q they are finitely generated (Mordell–Weil); over finite fields they power ECC; modularity of elliptic curves proved Fermat's Last Theorem.",
+        "Гладкие кубические кривые с отмеченной точкой образуют группу по закону хорды-касательной. Над Q они конечно порождены (Морделл–Вейль); над конечными полями питают ECC; модулярность эллиптических кривых доказала Великую теорему Ферма.",
+      ),
+      formula(
+        "y^2 = x^3 + ax + b, \\qquad 4a^3 + 27b^2 \\neq 0",
+        "y² = x³ + ax + b;   4a³ + 27b² ≠ 0",
+        "Weierstrass equation (nonzero discriminant)",
+        "Уравнение Вейерштрасса (ненулевой дискриминант)",
+      ),
+    ]),
   ],
   problems: [
     prob(

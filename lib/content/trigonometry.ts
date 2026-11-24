@@ -104,6 +104,60 @@ export const trigonometry: Section = {
         "arcsin и arccos определены только для аргументов из [−1, 1]; arctan принимает все действительные числа.",
       ),
     ]),
+    topic("right-triangle-trig", "Right Triangle Trigonometry", "Тригонометрия прямоугольного треугольника", [
+      p(
+        "In a right triangle, sine = opposite/hypotenuse, cosine = adjacent/hypotenuse, tangent = opposite/adjacent (SOH-CAH-TOA). These ratios solve for missing sides and angles; angles of elevation and depression apply them to heights and distances.",
+        "В прямоугольном треугольнике синус = противолежащий/гипотенуза, косинус = прилежащий/гипотенуза, тангенс = противолежащий/прилежащий (SOH-CAH-TOA). Эти отношения находят недостающие стороны и углы; углы возвышения и склонения применяют их к высотам и расстояниям.",
+      ),
+      formula(
+        "\\sin\\theta = \\frac{\\text{opp}}{\\text{hyp}}, \\quad \\cos\\theta = \\frac{\\text{adj}}{\\text{hyp}}, \\quad \\tan\\theta = \\frac{\\text{opp}}{\\text{adj}}",
+        "sin θ = opp/hyp;   cos θ = adj/hyp;   tg θ = opp/adj",
+      ),
+    ]),
+    topic("sum-difference", "Sum and Difference Formulas", "Формулы сложения", [
+      p(
+        "Addition formulas expand functions of a ± b and generate double-angle and half-angle identities as special cases.",
+        "Формулы сложения раскрывают функции от a ± b и порождают тождества двойного и половинного угла как частные случаи.",
+      ),
+      formula(
+        "\\sin(a \\pm b) = \\sin a\\cos b \\pm \\cos a\\sin b",
+        "sin(a ± b) = sin a·cos b ± cos a·sin b",
+      ),
+      formula(
+        "\\cos(a \\pm b) = \\cos a\\cos b \\mp \\sin a\\sin b",
+        "cos(a ± b) = cos a·cos b ∓ sin a·sin b",
+      ),
+    ]),
+    topic("half-angle", "Half-Angle and Power-Reduction", "Половинный угол и понижение степени", [
+      p(
+        "Power-reduction formulas rewrite squares in terms of cos 2x — essential for integration. Half-angle formulas follow by substituting x/2.",
+        "Формулы понижения степени переписывают квадраты через cos 2x — необходимы для интегрирования. Формулы половинного угла получаются подстановкой x/2.",
+      ),
+      formula(
+        "\\sin^2 x = \\frac{1 - \\cos 2x}{2}, \\qquad \\cos^2 x = \\frac{1 + \\cos 2x}{2}",
+        "sin²x = (1 − cos 2x)/2;   cos²x = (1 + cos 2x)/2",
+      ),
+    ]),
+    topic("polar-coordinates", "Polar Coordinates", "Полярные координаты", [
+      p(
+        "A point is (r, θ): distance and angle. Conversion links polar and Cartesian coordinates; polar equations draw roses, cardioids, and spirals naturally.",
+        "Точка — (r, θ): расстояние и угол. Переход связывает полярные и декартовы координаты; полярные уравнения естественно рисуют розы, кардиоиды и спирали.",
+      ),
+      formula(
+        "x = r\\cos\\theta, \\quad y = r\\sin\\theta, \\quad r^2 = x^2 + y^2",
+        "x = r·cos θ;   y = r·sin θ;   r² = x² + y²",
+      ),
+    ]),
+    topic("trig-applications", "Periodic Models", "Периодические модели", [
+      p(
+        "Simple harmonic motion x = A·cos(ωt + φ) models springs, pendulums (small angles), tides, and sound. Amplitude, angular frequency, and phase fully describe the oscillation.",
+        "Простое гармоническое движение x = A·cos(ωt + φ) моделирует пружины, маятники (малые углы), приливы и звук. Амплитуда, круговая частота и фаза полностью описывают колебание.",
+      ),
+      formula(
+        "x(t) = A\\cos(\\omega t + \\varphi), \\qquad T = \\frac{2\\pi}{\\omega}",
+        "x(t) = A·cos(ωt + φ);   T = 2π/ω",
+      ),
+    ]),
   ],
   problems: [
     prob(

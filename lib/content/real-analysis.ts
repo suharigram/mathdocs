@@ -65,6 +65,52 @@ export const realAnalysis: Section = {
         "Если |fₙ(x)| ≤ Mₙ для всех x и Σ Mₙ сходится, то Σ fₙ сходится равномерно (M-признак).",
       ),
     ]),
+    topic("sequences-series-real", "Sequences, Bolzano–Weierstrass, Cauchy", "Последовательности, Больцано–Вейерштрасс, Коши", [
+      p(
+        "Monotone bounded sequences converge. Bolzano–Weierstrass: every bounded sequence has a convergent subsequence. Cauchy's criterion characterizes convergence without knowing the limit — completeness in action.",
+        "Монотонные ограниченные последовательности сходятся. Больцано–Вейерштрасс: у каждой ограниченной последовательности есть сходящаяся подпоследовательность. Критерий Коши характеризует сходимость без знания предела — полнота в действии.",
+      ),
+      formula(
+        "\\forall \\varepsilon\\, \\exists N:\\; m,n > N \\Rightarrow |a_m - a_n| < \\varepsilon",
+        "∀ε ∃N: m, n > N ⇒ |aₘ − aₙ| < ε",
+        "Cauchy criterion",
+        "Критерий Коши",
+      ),
+    ]),
+    topic("differentiation-theory", "Differentiation Theory and Taylor's Theorem", "Теория дифференцирования и теорема Тейлора", [
+      p(
+        "Differentiability implies continuity, not conversely (|x| at 0). Darboux: derivatives have the intermediate value property. Taylor's theorem with remainder quantifies polynomial approximation.",
+        "Дифференцируемость влечёт непрерывность, но не наоборот (|x| в 0). Дарбу: производные обладают свойством промежуточного значения. Теорема Тейлора с остатком количественно оценивает многочленное приближение.",
+      ),
+      formula(
+        "f(x) = \\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k + \\frac{f^{(n+1)}(\\xi)}{(n+1)!}(x-a)^{n+1}",
+        "f(x) = Σ f⁽ᵏ⁾(a)/k!·(x − a)ᵏ + f⁽ⁿ⁺¹⁾(ξ)/(n + 1)!·(x − a)ⁿ⁺¹",
+        "Taylor's theorem (Lagrange remainder)",
+        "Теорема Тейлора (остаток в форме Лагранжа)",
+      ),
+    ]),
+    topic("metric-spaces", "Metric Spaces and Compactness", "Метрические пространства и компактность", [
+      p(
+        "A metric abstracts distance. In metric spaces compactness, sequential compactness, and completeness + total boundedness coincide. Continuous images of compact sets are compact; contractions have unique fixed points (Banach).",
+        "Метрика абстрагирует расстояние. В метрических пространствах компактность, секвенциальная компактность и полнота + вполне ограниченность совпадают. Непрерывные образы компактов компактны; сжатия имеют единственную неподвижную точку (Банах).",
+      ),
+      formula(
+        "d(Tx, Ty) \\le q\\,d(x,y),\\ q < 1 \\;\\Rightarrow\\; \\text{unique fixed point}",
+        "d(Tx, Ty) ≤ q·d(x,y), q < 1  ⇒  единственная неподвижная точка",
+        "Banach contraction principle",
+        "Принцип сжимающих отображений Банаха",
+      ),
+    ]),
+    topic("stone-weierstrass", "Approximation: Stone–Weierstrass", "Аппроксимация: теорема Стоуна–Вейерштрасса", [
+      p(
+        "Polynomials are dense in C[a,b] (Weierstrass); Stone's generalization: any subalgebra separating points and containing constants is dense. Fourier series give a parallel approximation story in L².",
+        "Многочлены плотны в C[a,b] (Вейерштрасс); обобщение Стоуна: любая подалгебра, разделяющая точки и содержащая константы, плотна. Ряды Фурье дают параллельную историю аппроксимации в L².",
+      ),
+      note(
+        "Bernstein polynomials give a constructive probabilistic proof of Weierstrass's theorem.",
+        "Многочлены Бернштейна дают конструктивное вероятностное доказательство теоремы Вейерштрасса.",
+      ),
+    ]),
   ],
   problems: [
     prob(

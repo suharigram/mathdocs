@@ -76,6 +76,38 @@ export const sequencesSeries: Section = {
         "В точке разрыва ряд Фурье сходится к середине скачка (теорема Дирихле).",
       ),
     ]),
+    topic("alternating-series", "Alternating Series", "Знакочередующиеся ряды", [
+      p(
+        "The Leibniz test: if terms decrease to 0 in absolute value, an alternating series converges. Absolute convergence implies convergence; conditional convergence is delicate — Riemann's rearrangement theorem says such series can be rearranged to any sum.",
+        "Признак Лейбница: если члены убывают к 0 по модулю, знакочередующийся ряд сходится. Абсолютная сходимость влечёт сходимость; условная хрупка — теорема Римана о перестановках утверждает, что такой ряд можно переставить к любой сумме.",
+      ),
+      formula(
+        "\\sum (-1)^{n} a_n \\text{ converges if } a_n \\downarrow 0",
+        "Σ (−1)ⁿaₙ сходится, если aₙ ↓ 0",
+        "Leibniz test",
+        "Признак Лейбница",
+      ),
+    ]),
+    topic("telescoping", "Telescoping Series", "Телескопические ряды", [
+      p(
+        "When terms split into differences, partial sums collapse: most pieces cancel. Partial fractions are the standard way to reveal the telescoping structure.",
+        "Когда члены распадаются в разности, частичные суммы схлопываются: большинство кусков сокращается. Простейшие дроби — стандартный способ обнаружить телескопическую структуру.",
+      ),
+      formula(
+        "\\sum_{n=1}^{\\infty}\\Big(\\frac{1}{n} - \\frac{1}{n+1}\\Big) = 1",
+        "Σ (1/n − 1/(n + 1)) = 1",
+      ),
+    ]),
+    topic("recursive-sequences", "Recursive Sequences", "Рекуррентные последовательности", [
+      p(
+        "A recurrence defines each term from previous ones. Iterating xₙ₊₁ = f(xₙ) converges to a fixed point when |f′| < 1 there — the basis of fixed-point iteration (see Dynamical Systems and Numerical Analysis).",
+        "Рекуррентность задаёт каждый член через предыдущие. Итерация xₙ₊₁ = f(xₙ) сходится к неподвижной точке, если там |f′| < 1 — основа метода простой итерации (см. Динамические системы и Численные методы).",
+      ),
+      formula(
+        "x_{n+1} = f(x_n), \\qquad x^* = f(x^*)",
+        "xₙ₊₁ = f(xₙ);   x* = f(x*)",
+      ),
+    ]),
   ],
   problems: [
     prob(

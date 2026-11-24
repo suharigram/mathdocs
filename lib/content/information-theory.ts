@@ -57,6 +57,46 @@ export const informationTheory: Section = {
         "При p = 1/2 канал — чистый шум: ёмкость 0. При p = 0 он идеален: 1 бит за использование.",
       ),
     ]),
+    topic("differential-entropy", "Differential Entropy and Continuous Sources", "Дифференциальная энтропия и непрерывные источники", [
+      p(
+        "For densities, h(X) = −∫f log f replaces sums by integrals. Unlike discrete entropy it can be negative and depends on units; the Gaussian maximizes it at fixed variance.",
+        "Для плотностей h(X) = −∫f log f заменяет суммы интегралами. В отличие от дискретной энтропии она может быть отрицательной и зависит от единиц; гауссиана максимизирует её при фиксированной дисперсии.",
+      ),
+      formula(
+        "h(X) = -\\int f(x)\\log f(x)\\,dx, \\qquad h(N(\\mu,\\sigma^2)) = \\tfrac{1}{2}\\log(2\\pi e\\sigma^2)",
+        "h(X) = −∫ f(x)log f(x) dx;   h(N(μ,σ²)) = ½log(2πeσ²)",
+      ),
+    ]),
+    topic("rate-distortion", "Rate–Distortion Theory", "Теория скорость–искажение", [
+      p(
+        "Lossy compression trades bits for error: R(D) is the minimum rate achieving distortion D. For a Gaussian source with squared error, R(D) = ½log(σ²/D) — the theoretical limit behind JPEG and MP3.",
+        "Сжатие с потерями меняет биты на ошибку: R(D) — минимальная скорость при искажении D. Для гауссова источника с квадратичной ошибкой R(D) = ½log(σ²/D) — теоретический предел JPEG и MP3.",
+      ),
+      formula(
+        "R(D) = \\min_{p(\\hat{x}|x):\\,E[d] \\le D} I(X;\\hat{X})",
+        "R(D) = min I(X;X̂) при E[d] ≤ D",
+      ),
+    ]),
+    topic("error-correcting", "Error-Correcting Codes", "Коды, исправляющие ошибки", [
+      p(
+        "Redundancy fights noise: Hamming codes correct single errors; Reed–Solomon codes protect CDs and QR codes; LDPC and polar codes approach Shannon capacity in 5G and deep-space links.",
+        "Избыточность борется с шумом: коды Хэмминга исправляют одиночные ошибки; Рида–Соломона защищают CD и QR-коды; LDPC и полярные коды приближаются к ёмкости Шеннона в 5G и дальней космической связи.",
+      ),
+      formula(
+        "d_{\\min} \\ge 2t + 1 \\;\\Rightarrow\\; \\text{corrects } t \\text{ errors}",
+        "d(мин) ≥ 2t + 1  ⇒  исправляет t ошибок",
+      ),
+    ]),
+    topic("kolmogorov", "Kolmogorov Complexity", "Колмогоровская сложность", [
+      p(
+        "The complexity of a string is the length of its shortest program. It is uncomputable, formalizes randomness (incompressible strings), and underlies the minimum description length principle.",
+        "Сложность строки — длина её кратчайшей программы. Она невычислима, формализует случайность (несжимаемые строки) и лежит в основе принципа минимальной длины описания.",
+      ),
+      formula(
+        "K(x) = \\min\\{|p| : U(p) = x\\}",
+        "K(x) = min {|p| : U(p) = x}",
+      ),
+    ]),
   ],
   problems: [
     prob(

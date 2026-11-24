@@ -65,6 +65,50 @@ export const financialMath: Section = {
         "Поразительный факт: ожидаемая доходность акции не входит — риск-нейтральное ценообразование её убирает.",
       ),
     ]),
+    topic("portfolio", "Portfolio Theory", "Теория портфеля", [
+      p(
+        "Markowitz: diversification cuts variance without cutting expected return. The efficient frontier collects optimal risk–return portfolios; correlations determine how much diversification helps.",
+        "Марковиц: диверсификация снижает дисперсию, не снижая ожидаемую доходность. Эффективная граница собирает оптимальные портфели риск–доходность; корреляции определяют, насколько помогает диверсификация.",
+      ),
+      formula(
+        "\\sigma_p^2 = w_1^2\\sigma_1^2 + w_2^2\\sigma_2^2 + 2w_1w_2\\rho\\sigma_1\\sigma_2",
+        "σₚ² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρσ₁σ₂",
+      ),
+    ]),
+    topic("capm", "CAPM and Beta", "CAPM и бета", [
+      p(
+        "Only systematic risk is priced: expected return = risk-free rate + β × market premium. Beta measures sensitivity to the market; idiosyncratic risk diversifies away.",
+        "Ценообразуется только систематический риск: ожидаемая доходность = безрисковая ставка + β × премия рынка. Бета измеряет чувствительность к рынку; идиосинкратический риск диверсифицируется.",
+      ),
+      formula(
+        "E[R_i] = R_f + \\beta_i\\big(E[R_m] - R_f\\big)",
+        "E[Rᵢ] = R_f + βᵢ(E[Rₘ] − R_f)",
+        "CAPM",
+        "CAPM",
+      ),
+    ]),
+    topic("binomial-pricing", "Binomial Option Pricing", "Биномиальное ценообразование опционов", [
+      p(
+        "Model the stock as up/down moves per step; replicate the option with stock + bond, or price by risk-neutral probabilities. As steps refine, the tree converges to Black–Scholes.",
+        "Моделируем акцию движениями вверх/вниз за шаг; реплицируем опцион акцией + облигацией или оцениваем риск-нейтральными вероятностями. При измельчении шагов дерево сходится к Блэку–Шоулзу.",
+      ),
+      formula(
+        "p = \\frac{e^{r\\Delta t} - d}{u - d}, \\qquad C = e^{-r\\Delta t}\\big(pC_u + (1-p)C_d\\big)",
+        "p = (e^(rΔt) − d)/(u − d);   C = e^(−rΔt)(pCᵤ + (1 − p)C_d)",
+        "Risk-neutral pricing step",
+        "Шаг риск-нейтрального ценообразования",
+      ),
+    ]),
+    topic("risk-measures", "Risk Measures: VaR and Beyond", "Меры риска: VaR и далее", [
+      p(
+        "Value-at-Risk is the loss threshold at a confidence level; expected shortfall averages losses beyond it (coherent, unlike VaR). Stress tests and Greeks (Δ, Γ, ν, Θ) complete the risk toolkit.",
+        "Value-at-Risk — порог убытка на уровне доверия; ожидаемый недостаток усредняет убытки за ним (когерентен, в отличие от VaR). Стресс-тесты и греки (Δ, Γ, ν, Θ) дополняют инструментарий риска.",
+      ),
+      formula(
+        "P(L > \\mathrm{VaR}_\\alpha) = 1 - \\alpha",
+        "P(L > VaR(α)) = 1 − α",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -115,6 +115,83 @@ export const algebra: Section = {
         "Неравенство треугольника: |a + b| ≤ |a| + |b| — модуль суммы не превосходит суммы модулей.",
       ),
     ]),
+    topic("functions-graphs", "Functions and Graphs", "Функции и графики", [
+      p(
+        "A function assigns exactly one output to each input; its graph passes the vertical line test. Domain and range describe allowed inputs and outputs. Shifts, stretches, and reflections transform graphs; inverse functions undo each other.",
+        "Функция сопоставляет каждому входу ровно один выход; её график проходит тест вертикальной прямой. Область определения и область значений описывают допустимые входы и выходы. Сдвиги, растяжения и отражения преобразуют графики; обратные функции взаимно уничтожаются.",
+      ),
+      formula(
+        "(f \\circ g)(x) = f(g(x)), \\qquad f^{-1}(f(x)) = x",
+        "(f∘g)(x) = f(g(x));   f⁻¹(f(x)) = x",
+      ),
+      list(
+        ["f(x) + k shifts up; f(x − h) shifts right", "f(x) + k сдвигает вверх; f(x − h) — вправо"],
+        ["−f(x) reflects over the x-axis; f(−x) over the y-axis", "−f(x) отражает относительно оси x; f(−x) — относительно оси y"],
+        ["Even functions: f(−x) = f(x); odd: f(−x) = −f(x)", "Чётные: f(−x) = f(x); нечётные: f(−x) = −f(x)"],
+      ),
+    ]),
+    topic("rational-expressions", "Rational Expressions", "Рациональные выражения", [
+      p(
+        "Rational expressions are ratios of polynomials. Simplify by factoring and canceling common factors; exclude values that zero the denominator. Operations follow fraction rules.",
+        "Рациональные выражения — отношения многочленов. Упрощайте разложением и сокращением общих множителей; исключайте значения, обращающие знаменатель в ноль. Действия подчиняются правилам дробей.",
+      ),
+      formula(
+        "\\frac{a/b}{c/d} = \\frac{ad}{bc}, \\qquad \\frac{a}{b} \\cdot \\frac{c}{d} = \\frac{ac}{bd}",
+        "(a/b)/(c/d) = ad/(bc);   (a/b)·(c/d) = ac/(bd)",
+      ),
+    ]),
+    topic("radical-expressions", "Radical Expressions", "Иррациональные выражения", [
+      p(
+        "Simplify radicals by extracting perfect powers; remember √(a²) = |a|. Rationalize denominators to remove roots from the bottom of a fraction.",
+        "Упрощайте радикалы, вынося точные степени; помните √(a²) = |a|. Избавляйтесь от корней в знаменателе домножением на сопряжённое.",
+      ),
+      formula(
+        "\\sqrt{a^2} = |a|, \\qquad \\frac{1}{\\sqrt{a}} = \\frac{\\sqrt{a}}{a}",
+        "√(a²) = |a|;   1/√a = √a/a",
+      ),
+    ]),
+    topic("absolute-value", "Absolute Value Equations and Inequalities", "Уравнения и неравенства с модулем", [
+      p(
+        "|x| = a (a > 0) splits into x = a or x = −a. Inequalities become intervals: |x| < a means −a < x < a, while |x| > a means two outer rays.",
+        "|x| = a (a > 0) распадается на x = a или x = −a. Неравенства превращаются в промежутки: |x| < a означает −a < x < a, а |x| > a — два внешних луча.",
+      ),
+      formula(
+        "|x| < a \\;\\Leftrightarrow\\; -a < x < a",
+        "|x| < a  ⇔  −a < x < a",
+      ),
+    ]),
+    topic("polynomial-division", "Polynomial Division and Theorems", "Деление многочленов и теоремы", [
+      p(
+        "Long division (or synthetic division by x − a) writes f(x) = (x − a)q(x) + r. The Remainder Theorem: r = f(a); the Factor Theorem: r = 0 exactly when a is a root.",
+        "Деление уголком (или схема Горнера для x − a) записывает f(x) = (x − a)q(x) + r. Теорема об остатке: r = f(a); теорема о множителях: r = 0 ровно когда a — корень.",
+      ),
+      formula(
+        "f(x) = (x - a)q(x) + f(a)",
+        "f(x) = (x − a)q(x) + f(a)",
+        "Remainder theorem",
+        "Теорема об остатке",
+      ),
+    ]),
+    topic("nonlinear-systems", "Nonlinear Systems", "Нелинейные системы", [
+      p(
+        "Systems mixing lines, parabolas, and circles are solved by substitution: express one variable and reduce to a single equation. Geometrically, solutions are intersection points.",
+        "Системы из прямых, парабол и окружностей решают подстановкой: выразить одну переменную и свести к одному уравнению. Геометрически решения — точки пересечения.",
+      ),
+      note(
+        "A line and a circle meet in 0, 1, or 2 points — the discriminant of the substituted quadratic decides.",
+        "Прямая и окружность пересекаются в 0, 1 или 2 точках — дискриминант подставленного квадратного уравнения решает.",
+      ),
+    ]),
+    topic("modeling", "Equations as Models", "Уравнения как модели", [
+      p(
+        "Word problems become equations: define variables, translate relations, solve, and check units and meaning. Distance = rate × time; work rates add; mixtures balance amounts.",
+        "Текстовые задачи превращаются в уравнения: определить переменные, перевести связи, решить, проверить единицы и смысл. Расстояние = скорость × время; скорости работы складываются; смеси балансируют количества.",
+      ),
+      formula(
+        "d = rt, \\qquad \\frac{1}{t_{\\text{together}}} = \\frac{1}{t_1} + \\frac{1}{t_2}",
+        "d = rt;   1/t(вместе) = 1/t₁ + 1/t₂",
+      ),
+    ]),
   ],
   problems: [
     prob(

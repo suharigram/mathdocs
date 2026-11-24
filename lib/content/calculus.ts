@@ -91,6 +91,72 @@ export const calculus: Section = {
         "Чтобы классифицировать критическую точку, проверьте смену знака f′ или вторую производную: f″ > 0 — минимум, f″ < 0 — максимум.",
       ),
     ]),
+    topic("lhopital", "L'Hôpital's Rule", "Правило Лопиталя", [
+      p(
+        "For 0/0 or ∞/∞ indeterminate forms, the limit of f/g equals the limit of f′/g′ when the latter exists. Other forms (0·∞, ∞−∞, 1^∞, 0⁰, ∞⁰) are first rewritten as quotients.",
+        "Для неопределённостей 0/0 или ∞/∞ предел f/g равен пределу f′/g′, если последний существует. Остальные формы (0·∞, ∞−∞, 1^∞, 0⁰, ∞⁰) сначала переписывают как частные.",
+      ),
+      formula(
+        "\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f'(x)}{g'(x)}",
+        "lim f(x)/g(x) = lim f′(x)/g′(x)",
+      ),
+    ]),
+    topic("mvt", "Mean Value Theorems", "Теоремы о среднем", [
+      p(
+        "Rolle: a smooth function equal at the endpoints has a horizontal tangent inside. The Mean Value Theorem generalizes: some tangent is parallel to the secant. Consequences: f′ = 0 ⇒ constant; f′ > 0 ⇒ increasing.",
+        "Ролль: у гладкой функции, равной на концах, внутри есть горизонтальная касательная. Теорема Лагранжа обобщает: какая-то касательная параллельна секущей. Следствия: f′ = 0 ⇒ константа; f′ > 0 ⇒ возрастание.",
+      ),
+      formula(
+        "f'(c) = \\frac{f(b) - f(a)}{b - a} \\quad \\text{for some } c \\in (a,b)",
+        "f′(c) = (f(b) − f(a))/(b − a) для некоторого c ∈ (a, b)",
+      ),
+    ]),
+    topic("implicit-rates", "Implicit Differentiation and Related Rates", "Неявное дифференцирование и связанные скорости", [
+      p(
+        "When y is defined implicitly by an equation, differentiate both sides with respect to x and solve for dy/dx. Related-rate problems differentiate a relation with respect to time to link changing quantities.",
+        "Когда y задана неявно уравнением, дифференцируем обе части по x и решаем относительно dy/dx. Задачи о связанных скоростях дифференцируют соотношение по времени, связывая изменяющиеся величины.",
+      ),
+      formula(
+        "x^2 + y^2 = r^2 \\;\\Rightarrow\\; 2x + 2y\\,y' = 0",
+        "x² + y² = r²  ⇒  2x + 2y·y′ = 0",
+      ),
+    ]),
+    topic("integration-techniques", "Integration Techniques", "Техники интегрирования", [
+      p(
+        "Substitution reverses the chain rule; integration by parts reverses the product rule; partial fractions split rational functions; trigonometric substitution handles √(a² − x²) and relatives.",
+        "Подстановка обращает правило цепочки; интегрирование по частям — правило произведения; простейшие дроби расщепляют рациональные функции; тригонометрическая подстановка разбирает √(a² − x²) и родственников.",
+      ),
+      formula(
+        "\\int u\\,dv = uv - \\int v\\,du",
+        "∫ u dv = uv − ∫ v du",
+        "Integration by parts",
+        "Интегрирование по частям",
+      ),
+      list(
+        ["√(a² − x²): substitute x = a sin θ", "√(a² − x²): подстановка x = a sin θ"],
+        ["√(a² + x²): x = a tan θ; √(x² − a²): x = a sec θ", "√(a² + x²): x = a tg θ; √(x² − a²): x = a sec θ"],
+      ),
+    ]),
+    topic("improper-integrals", "Improper Integrals", "Несобственные интегралы", [
+      p(
+        "Integrals over infinite intervals or with unbounded integrands are defined as limits. The p-integral ∫₁^∞ dx/xᵖ converges exactly when p > 1; comparison tests decide the rest.",
+        "Интегралы по бесконечным промежуткам или с неограниченными подынтегральными функциями определяются как пределы. p-интеграл ∫₁^∞ dx/xᵖ сходится ровно при p > 1; признаки сравнения решают остальное.",
+      ),
+      formula(
+        "\\int_1^{\\infty} \\frac{dx}{x^p} \\text{ converges} \\;\\Leftrightarrow\\; p > 1",
+        "∫₁^∞ dx/xᵖ сходится  ⇔  p > 1",
+      ),
+    ]),
+    topic("arc-length", "Arc Length and Surface Area", "Длина дуги и площадь поверхности", [
+      p(
+        "Arc length integrates infinitesimal hypotenuses √(1 + y′²); rotating a curve about an axis sweeps a surface whose area integrates 2π·radius·arc element.",
+        "Длина дуги интегрирует бесконечно малые гипотенузы √(1 + y′²); вращение кривой вокруг оси заметает поверхность, площадь которой интегрирует 2π·радиус·элемент дуги.",
+      ),
+      formula(
+        "L = \\int_a^b \\sqrt{1 + (y')^2}\\,dx, \\qquad S = \\int 2\\pi y\\,ds",
+        "L = ∫ₐᵇ √(1 + y′²) dx;   S = ∫ 2πy ds",
+      ),
+    ]),
   ],
   problems: [
     prob(

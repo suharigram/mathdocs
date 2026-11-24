@@ -60,6 +60,28 @@ export const fractals: Section = {
         "Уравнение неподвижной точки аттрактора",
       ),
     ]),
+    topic("hausdorff-box", "Hausdorff and Box-Counting Dimension", "Размерности Хаусдорфа и коробочная", [
+      p(
+        "Hausdorff dimension uses optimal covers at all scales; box-counting counts occupied grid boxes N(ε) ~ ε^{−D}. They agree for self-similar sets but can differ in general.",
+        "Размерность Хаусдорфа использует оптимальные покрытия на всех масштабах; коробочная считает занятые ячейки N(ε) ~ ε^{−D}. Для самоподобных множеств совпадают, в общем случае могут различаться.",
+      ),
+      formula(
+        "D = \\lim_{\\varepsilon \\to 0}\\frac{\\log N(\\varepsilon)}{\\log(1/\\varepsilon)}",
+        "D = lim log N(ε)/log(1/ε)",
+        "Box-counting dimension",
+        "Коробочная размерность",
+      ),
+    ]),
+    topic("nature-applications", "Fractals in Nature and Technology", "Фракталы в природе и технике", [
+      p(
+        "Coastlines, lungs, trees, and river networks are statistical fractals — self-similar in distribution. Fractal antennas pack bandwidth into small space; fracture surfaces and turbulence show fractal statistics.",
+        "Береговые линии, лёгкие, деревья и речные сети — статистические фракталы: самоподобны по распределению. Фрактальные антенны упаковывают полосу в малое пространство; поверхности изломов и турбулентность показывают фрактальную статистику.",
+      ),
+      note(
+        "The coastline paradox: measured length grows without bound as the ruler shrinks — dimension, not length, is the stable descriptor.",
+        "Парадокс береговой линии: измеренная длина растёт неограниченно при уменьшении линейки — устойчивый дескриптор — размерность, а не длина.",
+      ),
+    ]),
   ],
   problems: [
     prob(

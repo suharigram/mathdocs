@@ -62,6 +62,58 @@ export const arithmetic: Section = {
         "Чтобы разделить величину в отношении a:b:c, разбейте её на a + b + c равных частей и возьмите a, b, c частей.",
       ),
     ]),
+    topic("number-line", "Number Line, Ordering, and Absolute Value", "Числовая прямая, сравнение и модуль", [
+      p(
+        "Numbers sit on a line: farther right means greater. Negative numbers reverse intuition — −3 < −2. The absolute value |a| is the distance from a to 0, so it is never negative.",
+        "Числа располагаются на прямой: правее — больше. Отрицательные числа переворачивают интуицию: −3 < −2. Модуль |a| — расстояние от a до 0, поэтому он никогда не отрицателен.",
+      ),
+      formula(
+        "|a| = \\begin{cases} a, & a \\ge 0 \\\\ -a, & a < 0 \\end{cases}",
+        "|a| = a при a ≥ 0; |a| = −a при a < 0",
+      ),
+    ]),
+    topic("powers-roots", "Powers, Roots, and Scientific Notation", "Степени, корни и научная запись", [
+      p(
+        "aⁿ means n copies of a multiplied; a⁰ = 1 and a⁻ⁿ = 1/aⁿ. The square root √a undoes squaring. Scientific notation a×10ⁿ writes very large and very small numbers compactly.",
+        "aⁿ — произведение n копий a; a⁰ = 1 и a⁻ⁿ = 1/aⁿ. Квадратный корень √a обращает возведение в квадрат. Научная запись a×10ⁿ компактно записывает очень большие и очень малые числа.",
+      ),
+      formula(
+        "\\sqrt{ab} = \\sqrt{a}\\sqrt{b}, \\qquad a^{1/n} = \\sqrt[n]{a}",
+        "√(ab) = √a·√b;   a^(1/n) = ⁿ√a",
+      ),
+    ]),
+    topic("divisibility-basics", "Divisibility, Factors, and Multiples", "Делимость, делители и кратные", [
+      p(
+        "Even numbers are divisible by 2; primes have exactly two divisors, composites more. Factoring breaks a number into primes; GCD and LCM organize common divisors and multiples (see Number Theory).",
+        "Чётные числа делятся на 2; простые имеют ровно два делителя, составные — больше. Разложение разбивает число на простые; НОД и НОК упорядочивают общие делители и кратные (см. Теорию чисел).",
+      ),
+      list(
+        ["Divisible by 2: last digit even; by 5: last digit 0 or 5", "Делится на 2: последняя цифра чётная; на 5: 0 или 5"],
+        ["Divisible by 3 or 9: digit sum divisible by 3 or 9", "Делится на 3 или 9: сумма цифр делится на 3 или 9"],
+        ["Divisible by 10: last digit 0", "Делится на 10: последняя цифра 0"],
+      ),
+    ]),
+    topic("rounding-estimation", "Rounding and Estimation", "Округление и оценка", [
+      p(
+        "Rounding keeps a chosen precision: look at the next digit, 5 or more rounds up. Significant figures count meaningful digits. Estimating before computing catches gross errors.",
+        "Округление сохраняет выбранную точность: смотрим на следующую цифру, 5 и больше — вверх. Значащие цифры считают осмысленные знаки. Оценка перед вычислением ловит грубые ошибки.",
+      ),
+      note(
+        "3.14159 to 2 decimal places is 3.14; to 3 significant figures it is 3.14; 0.00456 has 3 significant figures.",
+        "3,14159 до 2 знаков после запятой — 3,14; до 3 значащих цифр — 3,14; у 0,00456 три значащие цифры.",
+      ),
+    ]),
+    topic("units-measurement", "Units and Measurement", "Единицы и измерения", [
+      p(
+        "Measurements carry units; converting means multiplying by factors equal to 1 (1000 m / 1 km). Dimensional analysis checks that formulas make sense: you cannot add meters to seconds.",
+        "Измерения несут единицы; перевод — умножение на множители, равные 1 (1000 м / 1 км). Анализ размерностей проверяет осмысленность формул: нельзя складывать метры с секундами.",
+      ),
+      list(
+        ["Length: 1 km = 1000 m, 1 m = 100 cm", "Длина: 1 км = 1000 м, 1 м = 100 см"],
+        ["Mass: 1 kg = 1000 g; Time: 1 h = 3600 s", "Масса: 1 кг = 1000 г; время: 1 ч = 3600 с"],
+        ["Area scales by the square, volume by the cube of the length factor", "Площадь масштабируется квадратом, объём — кубом коэффициента длины"],
+      ),
+    ]),
   ],
   problems: [
     prob(

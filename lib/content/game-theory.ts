@@ -56,6 +56,48 @@ export const gameTheory: Section = {
         "Повторное взаимодействие меняет всё: «народная теорема» поддерживает кооперацию в повторяющейся дилемме заключённого.",
       ),
     ]),
+    topic("extensive-form", "Extensive Form and Game Trees", "Развёрнутая форма и деревья игр", [
+      p(
+        "Sequential games are trees with information sets. Backward induction solves perfect-information games; subgame perfection refines Nash for dynamic settings (Selten).",
+        "Последовательные игры — деревья с информационными множествами. Обратная индукция решает игры с совершенной информацией; совершенство в подыграх уточняет Нэша для динамических ситуаций (Зельтен).",
+      ),
+      note(
+        "Zermelo's theorem: chess (finite, perfect information) is determined — win, lose, or draw with best play.",
+        "Теорема Цермело: шахматы (конечные, совершенная информация) детерминированы — выигрыш, проигрыш или ничья при лучшей игре.",
+      ),
+    ]),
+    topic("bayesian-games", "Bayesian Games and Information", "Байесовы игры и информация", [
+      p(
+        "Players have private types drawn from a common prior; Bayesian Nash equilibrium maximizes expected payoff over types. Signaling and screening models study how information is revealed or extracted.",
+        "Игроки имеют частные типы из общего априора; байесово равновесие Нэша максимизирует ожидаемый выигрыш по типам. Модели сигнализации и скрининга изучают, как информация раскрывается или извлекается.",
+      ),
+      note(
+        "Spence's job-market signaling: education can separate types even when it teaches nothing.",
+        "Сигнализация Спенса на рынке труда: образование может разделять типы, даже ничему не уча.",
+      ),
+    ]),
+    topic("mechanism-design", "Mechanism Design and Auctions", "Дизайн механизмов и аукционы", [
+      p(
+        "Mechanism design is reverse game theory: choose rules so selfish play yields a desired outcome. Vickrey (second-price) auctions make truthful bidding dominant; revenue equivalence links standard auction formats.",
+        "Дизайн механизмов — обратная теория игр: выбрать правила так, чтобы эгоистичная игра давала нужный исход. Аукционы Викри (вторая цена) делают правдивые ставки доминирующими; эквивалентность выручки связывает стандартные форматы.",
+      ),
+      formula(
+        "\\text{Vickrey: winner pays the second-highest bid}",
+        "Викри: победитель платит вторую по величине ставку",
+      ),
+    ]),
+    topic("cooperative", "Cooperative Games and the Shapley Value", "Кооперативные игры и значение Шепли", [
+      p(
+        "Coalitional games assign value to groups. The core contains stable allocations; the Shapley value splits gains by average marginal contribution — fairness axioms pin it down uniquely.",
+        "Коалиционные игры приписывают ценность группам. Ядро содержит устойчивые распределения; значение Шепли делит выигрыш по среднему предельному вкладу — аксиомы справедливости фиксируют его единственно.",
+      ),
+      formula(
+        "\\phi_i = \\sum_{S \\subseteq N \\setminus i}\\frac{|S|!(n-|S|-1)!}{n!}\\big(v(S \\cup i) - v(S)\\big)",
+        "φᵢ = Σ |S|!(n − |S| − 1)!/n! · (v(S ∪ i) − v(S))",
+        "Shapley value",
+        "Значение Шепли",
+      ),
+    ]),
   ],
   problems: [
     prob(

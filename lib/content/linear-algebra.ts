@@ -107,6 +107,62 @@ export const linearAlgebra: Section = {
         "Метрический тензор gᵢⱼ измеряет длины и углы; в теории относительности он кодирует саму гравитацию.",
       ),
     ]),
+    topic("transformations-matrices", "Linear Transformations and Standard Matrices", "Линейные преобразования и стандартные матрицы", [
+      p(
+        "Every linear map of the plane is a matrix. Rotations, reflections, projections, and shears have explicit standard matrices; composition corresponds to matrix multiplication.",
+        "Каждое линейное отображение плоскости — матрица. Повороты, отражения, проекции и сдвиги имеют явные стандартные матрицы; композиция соответствует умножению матриц.",
+      ),
+      formula(
+        "R_\\theta = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}",
+        "R(θ) = [[cos θ, −sin θ], [sin θ, cos θ]]",
+        "Rotation by angle θ",
+        "Поворот на угол θ",
+      ),
+    ]),
+    topic("change-basis", "Change of Basis", "Замена базиса", [
+      p(
+        "Coordinates depend on the basis. If P columns are the new basis vectors, then [v]old = P[v]new, and a matrix transforms as A′ = P⁻¹AP — similarity.",
+        "Координаты зависят от базиса. Если столбцы P — новые базисные векторы, то [v]стар = P[v]нов, а матрица преобразуется как A′ = P⁻¹AP — подобие.",
+      ),
+      formula(
+        "A' = P^{-1}AP",
+        "A′ = P⁻¹AP",
+        "Similarity transformation",
+        "Преобразование подобия",
+      ),
+    ]),
+    topic("orthogonality", "Orthogonality, Gram–Schmidt, and Least Squares", "Ортогональность, Грам–Шмидт и наименьшие квадраты", [
+      p(
+        "Orthogonal projections minimize distance. Gram–Schmidt orthonormalizes a basis (QR decomposition); least squares solves inconsistent systems Ax = b via the normal equations AᵀAx = Aᵀb.",
+        "Ортогональные проекции минимизируют расстояние. Грам–Шмидт ортонормирует базис (QR-разложение); наименьшие квадраты решают несовместные системы Ax = b через нормальные уравнения AᵀAx = Aᵀb.",
+      ),
+      formula(
+        "A^TA\\hat{x} = A^Tb",
+        "AᵀAx̂ = Aᵀb",
+        "Normal equations",
+        "Нормальные уравнения",
+      ),
+    ]),
+    topic("diagonalization", "Diagonalization", "Диагонализация", [
+      p(
+        "If A has n independent eigenvectors, A = PDP⁻¹ with D diagonal. Powers become trivial: Aᵏ = PDᵏP⁻¹ — the engine behind matrix exponentials and Markov chain limits.",
+        "Если у A есть n независимых собственных векторов, A = PDP⁻¹ с диагональной D. Степени тривиальны: Aᵏ = PDᵏP⁻¹ — двигатель матричных экспонент и пределов цепей Маркова.",
+      ),
+      formula(
+        "A = PDP^{-1}, \\qquad A^k = PD^kP^{-1}",
+        "A = PDP⁻¹;   Aᵏ = PDᵏP⁻¹",
+      ),
+    ]),
+    topic("svd", "Singular Value Decomposition", "Сингулярное разложение (SVD)", [
+      p(
+        "Every matrix factors as A = UΣVᵀ: rotation, scaling, rotation. Singular values rank importance — truncating them compresses images, denoises data, and powers recommendation systems.",
+        "Любая матрица раскладывается как A = UΣVᵀ: поворот, масштабирование, поворот. Сингулярные числа ранжируют важность — их усечение сжимает изображения, очищает данные и питает рекомендательные системы.",
+      ),
+      formula(
+        "A = U\\Sigma V^T",
+        "A = UΣVᵀ",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -61,6 +61,50 @@ export const optimization: Section = {
         "Наименьшие квадраты, ЛП и многие функции потерь ML выпуклы; обучение нейросетей — нет.",
       ),
     ]),
+    topic("newton-methods", "Newton and Quasi-Newton Methods", "Методы Ньютона и квазиньютоновские", [
+      p(
+        "Newton's method uses the Hessian for quadratic convergence near the solution; BFGS builds Hessian approximations from gradients — the default of smooth optimization.",
+        "Метод Ньютона использует гессиан для квадратичной сходимости вблизи решения; BFGS строит приближения гессиана по градиентам — стандарт гладкой оптимизации.",
+      ),
+      formula(
+        "\\mathbf{x}_{k+1} = \\mathbf{x}_k - [\\nabla^2 f]^{-1}\\nabla f",
+        "xₖ₊₁ = xₖ − [∇²f]⁻¹∇f",
+      ),
+    ]),
+    topic("interior-point", "Interior Point Methods", "Методы внутренней точки", [
+      p(
+        "Barrier functions keep iterates inside the feasible region; following the central path solves LPs and convex programs in polynomial time (Karmarkar and successors).",
+        "Барьерные функции удерживают итерации внутри допустимой области; следование центральному пути решает ЛП и выпуклые программы за полиномиальное время (Кармаркар и преемники).",
+      ),
+      formula(
+        "\\min\\ c^Tx - \\mu\\sum_i \\ln(b_i - a_i^Tx)",
+        "min cᵀx − μ·Σ ln(bᵢ − aᵢᵀx)",
+        "Logarithmic barrier subproblem",
+        "Подзадача с логарифмическим барьером",
+      ),
+    ]),
+    topic("integer-combinatorial", "Integer and Combinatorial Optimization", "Целочисленная и комбинаторная оптимизация", [
+      p(
+        "Integer programs are NP-hard in general: branch-and-bound, cutting planes, and relaxations attack them. Classic problems: knapsack, traveling salesman, scheduling, matching.",
+        "Целочисленные программы NP-трудны в общем случае: ветви-и-границы, отсекающие плоскости и релаксации атакуют их. Классические задачи: рюкзак, коммивояжёр, расписания, паросочетания.",
+      ),
+      note(
+        "LP relaxation bounds the integer optimum; total unimodularity makes some problems (flows, matchings) integral for free.",
+        "ЛП-релаксация ограничивает целочисленный оптимум; полная унимодулярность делает некоторые задачи (потоки, паросочетания) целочисленными бесплатно.",
+      ),
+    ]),
+    topic("stochastic-optimization", "Stochastic Optimization and SGD", "Стохастическая оптимизация и SGD", [
+      p(
+        "When objectives are expectations, stochastic gradient descent uses noisy gradient samples — the engine of machine learning. Momentum, Adam, and learning-rate schedules tame the noise.",
+        "Когда цели — ожидания, стохастический градиентный спуск использует шумные выборки градиента — двигатель машинного обучения. Моментум, Adam и расписания шага укрощают шум.",
+      ),
+      formula(
+        "\\theta_{k+1} = \\theta_k - \\alpha_k \\nabla f_{i_k}(\\theta_k)",
+        "θₖ₊₁ = θₖ − αₖ∇fᵢₖ(θₖ)",
+        "SGD update",
+        "Шаг SGD",
+      ),
+    ]),
   ],
   problems: [
     prob(

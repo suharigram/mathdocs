@@ -57,6 +57,62 @@ export const differentialGeometry: Section = {
         "∬ K dA + ∮ κ_g ds = 2π·χ(M)",
       ),
     ]),
+    topic("manifolds-tangent", "Smooth Manifolds and Tangent Spaces", "Гладкие многообразия и касательные пространства", [
+      p(
+        "Smooth manifolds carry compatible charts; tangent vectors are derivations or curve velocities. The tangent bundle collects all tangent spaces; vector fields are its sections.",
+        "Гладкие многообразия несут согласованные карты; касательные векторы — дифференцирования или скорости кривых. Касательное расслоение собирает все касательные пространства; векторные поля — его сечения.",
+      ),
+      formula(
+        "T_pM, \\qquad TM = \\bigsqcup_p T_pM",
+        "TₚM;   TM = ∪ TₚM",
+      ),
+    ]),
+    topic("forms", "Differential Forms and Exterior Calculus", "Дифференциальные формы и внешнее исчисление", [
+      p(
+        "k-forms integrate over k-dimensional surfaces; the exterior derivative d satisfies d² = 0 and unifies grad, curl, div. Stokes' theorem ∫_M dω = ∫_∂M ω is the master identity.",
+        "k-формы интегрируются по k-мерным поверхностям; внешний дифференциал d удовлетворяет d² = 0 и объединяет grad, rot, div. Теорема Стокса ∫_M dω = ∫_∂M ω — главное тождество.",
+      ),
+      formula(
+        "\\int_M d\\omega = \\int_{\\partial M} \\omega, \\qquad d^2 = 0",
+        "∫_M dω = ∫_∂M ω;   d² = 0",
+        "Generalized Stokes theorem",
+        "Обобщённая теорема Стокса",
+      ),
+    ]),
+    topic("connections", "Connections and Covariant Derivatives", "Связности и ковариантные производные", [
+      p(
+        "Comparing vectors at different points needs a connection. The Levi-Civita connection is the unique torsion-free metric-compatible one; its Christoffel symbols encode how coordinates twist.",
+        "Сравнение векторов в разных точках требует связности. Связность Леви-Чивиты — единственная без кручения и согласованная с метрикой; её символы Кристоффеля кодируют закрутку координат.",
+      ),
+      formula(
+        "\\nabla_{\\partial_i}\\partial_j = \\Gamma^k_{ij}\\,\\partial_k",
+        "∇ᵢ∂ⱼ = Γᵏᵢⱼ∂ₖ",
+      ),
+    ]),
+    topic("riemannian", "Riemannian Metrics and Geodesics", "Римановы метрики и геодезические", [
+      p(
+        "A Riemannian metric gives inner products on tangent spaces, hence lengths and angles. Geodesics locally minimize length and satisfy the geodesic equation; general relativity makes gravity the geodesics of spacetime.",
+        "Риманова метрика задаёт скалярные произведения в касательных пространствах, отсюда длины и углы. Геодезические локально минимизируют длину и удовлетворяют уравнению геодезических; ОТО делает гравитацию геодезическими пространства-времени.",
+      ),
+      formula(
+        "\\ddot{x}^k + \\Gamma^k_{ij}\\dot{x}^i\\dot{x}^j = 0",
+        "ẍᵏ + Γᵏᵢⱼẋⁱẋʲ = 0",
+        "Geodesic equation",
+        "Уравнение геодезических",
+      ),
+    ]),
+    topic("curvature-tensor", "Riemann and Ricci Curvature", "Тензоры кривизны Римана и Риччи", [
+      p(
+        "The Riemann tensor measures failure of parallel transport around loops; its contractions give Ricci curvature and scalar curvature. Einstein's equation Gμν = 8πTμν equates geometry with matter.",
+        "Тензор Римана измеряет отказ параллельного переноса вокруг петель; его свёртки дают кривизну Риччи и скалярную кривизну. Уравнение Эйнштейна Gμν = 8πTμν приравнивает геометрию материи.",
+      ),
+      formula(
+        "R^\\rho{}_{\\sigma\\mu\\nu}, \\qquad G_{\\mu\\nu} = 8\\pi\\,T_{\\mu\\nu}",
+        "R^ρ_σμν;   Gμν = 8πTμν",
+        "Riemann tensor; Einstein equation (geometric units)",
+        "Тензор Римана; уравнение Эйнштейна (геометрические единицы)",
+      ),
+    ]),
   ],
   problems: [
     prob(

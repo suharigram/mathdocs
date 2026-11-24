@@ -57,6 +57,50 @@ export const dynamicalSystems: Section = {
         "Детерминированность ≠ предсказуемость: хаосу не нужна случайность, только нелинейное растяжение и складывание.",
       ),
     ]),
+    topic("bifurcations", "Bifurcations", "Бифуркации", [
+      p(
+        "Bifurcations are qualitative changes as parameters vary: saddle-node creates/annihilates equilibria, pitchfork breaks symmetry, Hopf births a limit cycle. The logistic map's period doubling is a cascade of flip bifurcations.",
+        "Бифуркации — качественные изменения при изменении параметров: седло-узел создаёт/уничтожает равновесия, вилка ломает симметрию, Хопф рождает предельный цикл. Удвоение периода логистического отображения — каскад бифуркаций удвоения.",
+      ),
+      formula(
+        "\\dot{x} = r + x^2 \\quad \\text{(saddle-node normal form)}",
+        "ẋ = r + x²   (нормальная форма седло-узла)",
+      ),
+    ]),
+    topic("poincare-bendixson", "Planar Systems: Poincaré–Bendixson", "Плоские системы: Пуанкаре–Бендиксон", [
+      p(
+        "In the plane, bounded orbits must approach an equilibrium or a periodic orbit — no chaos in 2D continuous systems. Index theory and Dulac's criterion rule out cycles.",
+        "На плоскости ограниченные орбиты обязаны приближаться к равновесию или периодической орбите — хаоса в двумерных непрерывных системах нет. Теория индекса и критерий Дюлака исключают циклы.",
+      ),
+      note(
+        "Chaos needs at least 3 dimensions for flows (Lorenz), or 1 dimension for noninvertible maps (logistic).",
+        "Хаосу нужно минимум 3 измерения для потоков (Лоренц) или 1 измерение для необратимых отображений (логистическое).",
+      ),
+    ]),
+    topic("ergodic", "Ergodic Theory", "Эргодическая теория", [
+      p(
+        "Ergodic systems explore their space uniformly: time averages equal space averages (Birkhoff). Mixing is stronger; entropy (Kolmogorov–Sinai) measures information production.",
+        "Эргодические системы равномерно обходят пространство: временные средние равны пространственным (Биркгоф). Перемешивание сильнее; энтропия (Колмогорова–Синая) измеряет производство информации.",
+      ),
+      formula(
+        "\\lim_{T\\to\\infty}\\frac{1}{T}\\int_0^T f(\\varphi_t x)\\,dt = \\int f\\,d\\mu",
+        "lim (1/T)∫₀ᵀ f(φₜx) dt = ∫ f dμ",
+        "Birkhoff ergodic theorem",
+        "Эргодическая теорема Биркгофа",
+      ),
+    ]),
+    topic("hamiltonian", "Hamiltonian Systems and KAM", "Гамильтоновы системы и КАМ", [
+      p(
+        "Hamiltonian flows preserve phase volume (Liouville) and energy. Integrable systems foliate into tori; KAM theory says most tori survive small perturbations — stability islands amid chaos.",
+        "Гамильтоновы потоки сохраняют фазовый объём (Лиувилль) и энергию. Интегрируемые системы расслаиваются на торы; КАМ-теория утверждает, что большинство торов переживает малые возмущения — острова устойчивости среди хаоса.",
+      ),
+      formula(
+        "\\dot{q} = \\frac{\\partial H}{\\partial p}, \\qquad \\dot{p} = -\\frac{\\partial H}{\\partial q}",
+        "q̇ = ∂H/∂p;   ṗ = −∂H/∂q",
+        "Hamilton's equations",
+        "Уравнения Гамильтона",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -111,6 +111,62 @@ export const probabilityStatistics: Section = {
         "p-значение — не вероятность истинности нулевой гипотезы: частое и важное заблуждение.",
       ),
     ]),
+    topic("distributions-catalog", "Common Distributions", "Основные распределения", [
+      p(
+        "Discrete: Bernoulli, binomial, geometric, Poisson. Continuous: uniform, exponential, normal. Each models a canonical situation: counts of successes, waiting times, measurement noise.",
+        "Дискретные: Бернулли, биномиальное, геометрическое, Пуассона. Непрерывные: равномерное, экспоненциальное, нормальное. Каждое моделирует каноническую ситуацию: числа успехов, времена ожидания, шум измерений.",
+      ),
+      list(
+        ["Binomial(n,p): mean np, variance np(1−p)", "Биномиальное(n,p): среднее np, дисперсия np(1−p)"],
+        ["Poisson(λ): mean = variance = λ", "Пуассона(λ): среднее = дисперсия = λ"],
+        ["Exponential(λ): mean 1/λ, memoryless", "Экспоненциальное(λ): среднее 1/λ, без памяти"],
+        ["Normal(μ,σ²): 68–95–99.7 rule within 1–2–3 σ", "Нормальное(μ,σ²): правило 68–95–99,7 в пределах 1–2–3 σ"],
+      ),
+    ]),
+    topic("joint-correlation", "Joint Distributions and Correlation", "Совместные распределения и корреляция", [
+      p(
+        "Joint distributions describe several variables together; marginals and conditionals derive from them. Covariance measures joint variability; correlation normalizes it to [−1, 1]. Zero correlation does not imply independence.",
+        "Совместные распределения описывают несколько переменных вместе; маргинальные и условные выводятся из них. Ковариация измеряет совместную изменчивость; корреляция нормирует её в [−1, 1]. Нулевая корреляция не влечёт независимость.",
+      ),
+      formula(
+        "\\rho_{XY} = \\frac{\\mathrm{Cov}(X,Y)}{\\sigma_X \\sigma_Y}",
+        "ρ(X,Y) = Cov(X,Y)/(σₓσᵧ)",
+      ),
+    ]),
+    topic("estimation", "Estimation and Sampling", "Оценивание и выборки", [
+      p(
+        "Estimators are judged by bias, variance, and consistency. Maximum likelihood picks parameters making the data most probable; the sample mean and (n−1)-corrected variance are the workhorses.",
+        "Оценки судят по смещению, дисперсии и состоятельности. Максимальное правдоподобие выбирает параметры, делающие данные наиболее вероятными; выборочное среднее и дисперсия с поправкой (n−1) — рабочие лошадки.",
+      ),
+      formula(
+        "s^2 = \\frac{1}{n-1}\\sum (x_i - \\bar{x})^2",
+        "s² = (1/(n − 1))·Σ (xᵢ − x̄)²",
+        "Unbiased sample variance",
+        "Несмещённая выборочная дисперсия",
+      ),
+    ]),
+    topic("tests-catalog", "Hypothesis Tests in Practice", "Проверка гипотез на практике", [
+      p(
+        "t-tests compare means, chi-square tests check fit and independence, ANOVA compares several groups, F-tests compare variances. Type I error is the false positive rate α; power is 1 − β.",
+        "t-критерии сравнивают средние, хи-квадрат проверяет согласие и независимость, ANOVA сравнивает несколько групп, F-критерий — дисперсии. Ошибка I рода — частота ложных срабатываний α; мощность — 1 − β.",
+      ),
+      note(
+        "Multiple testing inflates false positives — Bonferroni and FDR corrections compensate.",
+        "Множественные проверки раздувают ложные срабатывания — поправки Бонферрони и FDR компенсируют.",
+      ),
+    ]),
+    topic("bayesian", "Bayesian Statistics", "Байесовская статистика", [
+      p(
+        "Bayes treats parameters as random: prior × likelihood → posterior. Conjugate priors keep updates closed-form; credible intervals state direct probability about parameters, unlike confidence intervals.",
+        "Байес считает параметры случайными: априор × правдоподобие → апостериор. Сопряжённые априорные распределения сохраняют обновления в замкнутой форме; байесовские интервалы говорят прямую вероятность о параметрах, в отличие от доверительных.",
+      ),
+      formula(
+        "p(\\theta \\mid D) \\propto p(D \\mid \\theta)\\,p(\\theta)",
+        "p(θ|D) ∝ p(D|θ)·p(θ)",
+        "Posterior ∝ likelihood × prior",
+        "Апостериор ∝ правдоподобие × априор",
+      ),
+    ]),
   ],
   problems: [
     prob(

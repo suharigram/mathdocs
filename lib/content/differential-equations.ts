@@ -96,6 +96,60 @@ export const differentialEquations: Section = {
         "Разложение на простейшие дроби превращает F(s) в табличные слагаемые; обратное преобразование считывает решение.",
       ),
     ]),
+    topic("exact", "Exact Equations", "Уравнения в полных дифференциалах", [
+      p(
+        "M dx + N dy = 0 is exact when Mᵧ = Nₓ: the left side is dF for some potential F, and solutions are level curves F = C. An integrating factor can make a non-exact equation exact.",
+        "M dx + N dy = 0 точно, когда Mᵧ = Nₓ: левая часть есть dF некоторого потенциала F, решения — линии уровня F = C. Интегрирующий множитель может сделать неточное уравнение точным.",
+      ),
+      formula(
+        "M_y = N_x \\;\\Rightarrow\\; F(x,y) = C",
+        "Mᵧ = Nₓ  ⇒  F(x,y) = C",
+      ),
+    ]),
+    topic("bernoulli", "Bernoulli Equations", "Уравнения Бернулли", [
+      p(
+        "y′ + p(x)y = q(x)yⁿ becomes linear under the substitution v = y^{1−n} — a classic trick that extends the linear toolbox.",
+        "y′ + p(x)y = q(x)yⁿ становится линейным подстановкой v = y^{1−n} — классический приём, расширяющий линейный инструментарий.",
+      ),
+      formula(
+        "v = y^{1-n} \\;\\Rightarrow\\; v' + (1-n)p\\,v = (1-n)q",
+        "v = y^(1−n)  ⇒  v′ + (1 − n)p·v = (1 − n)q",
+      ),
+    ]),
+    topic("systems", "Systems of ODEs", "Системы ОДУ", [
+      p(
+        "Write x′ = Ax. Eigenvalues and eigenvectors of A build the solution; the matrix exponential e^{At} packages it. The phase portrait classifies equilibria: nodes, saddles, spirals, centers.",
+        "Запишем x′ = Ax. Собственные значения и векторы A строят решение; матричная экспонента e^{At} упаковывает его. Фазовый портрет классифицирует равновесия: узлы, сёдла, фокусы, центры.",
+      ),
+      formula(
+        "\\mathbf{x}(t) = e^{At}\\mathbf{x}(0)",
+        "x(t) = e^(At)·x(0)",
+      ),
+    ]),
+    topic("modeling", "Modeling with ODEs", "Моделирование ОДУ", [
+      p(
+        "Exponential growth/decay models populations and radioactivity; Newton's cooling models temperature; mixing tanks track concentration; springs give harmonic oscillation; SIR models split populations into susceptible, infected, recovered.",
+        "Экспоненциальный рост/убывание моделирует популяции и радиоактивность; закон Ньютона — остывание; баки смешивания отслеживают концентрацию; пружины дают гармонические колебания; SIR-модели делят популяцию на восприимчивых, заражённых, выздоровевших.",
+      ),
+      formula(
+        "T' = -k(T - T_{\\text{env}}), \\qquad m x'' + c x' + kx = 0",
+        "T′ = −k(T − T(среды));   mx″ + cx′ + kx = 0",
+        "Newton cooling; damped spring",
+        "Остывание Ньютона; пружина с демпфированием",
+      ),
+    ]),
+    topic("series-solutions", "Series Solutions", "Решения в рядах", [
+      p(
+        "Near ordinary points, substitute a power series and match coefficients. At regular singular points the Frobenius method allows xʳ times a series — producing Bessel and Legendre functions.",
+        "Вблизи обыкновенных точек подставляем степенной ряд и приравниваем коэффициенты. В регулярных особых точках метод Фробениуса допускает xʳ, умноженный на ряд, — порождая функции Бесселя и Лежандра.",
+      ),
+      formula(
+        "y = \\sum_{n=0}^{\\infty} a_n (x - x_0)^{n+r}",
+        "y = Σ aₙ(x − x₀)^(n+r)",
+        "Frobenius ansatz",
+        "Подстановка Фробениуса",
+      ),
+    ]),
   ],
   problems: [
     prob(

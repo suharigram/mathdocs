@@ -65,6 +65,48 @@ export const functionalAnalysis: Section = {
         "Спектральное разложение (компактный самосопряжённый T)",
       ),
     ]),
+    topic("dual-weak", "Dual Spaces and Weak Convergence", "Сопряжённые пространства и слабая сходимость", [
+      p(
+        "The dual X* collects continuous linear functionals. Weak convergence tests against all functionals; Banach–Alaoglu makes the dual unit ball weak-* compact — the engine of existence proofs.",
+        "Сопряжённое X* собирает непрерывные линейные функционалы. Слабая сходимость проверяется всеми функционалами; Банах–Алаоглу делает единичный шар сопряжённого слабо-* компактным — двигатель доказательств существования.",
+      ),
+      formula(
+        "x_n \\rightharpoonup x \\;\\Leftrightarrow\\; \\varphi(x_n) \\to \\varphi(x)\\ \\forall \\varphi \\in X^*",
+        "xₙ ⇀ x  ⇔  φ(xₙ) → φ(x) для всех φ ∈ X*",
+      ),
+    ]),
+    topic("compact-operators", "Compact Operators", "Компактные операторы", [
+      p(
+        "Compact operators send bounded sets to relatively compact ones — infinite-dimensional analogues of matrices. Their spectrum is discrete (except 0), and the Fredholm alternative governs solvability of (I − T)x = y.",
+        "Компактные операторы переводят ограниченные множества в относительно компактные — бесконечномерные аналоги матриц. Их спектр дискретен (кроме 0), альтернатива Фредгольма управляет разрешимостью (I − T)x = y.",
+      ),
+      note(
+        "Integral operators with continuous kernels on C[a,b] are compact — the classical source of examples.",
+        "Интегральные операторы с непрерывными ядрами на C[a,b] компактны — классический источник примеров.",
+      ),
+    ]),
+    topic("unbounded", "Unbounded Operators and Quantum Mechanics", "Неограниченные операторы и квантовая механика", [
+      p(
+        "Position and momentum are unbounded; domains matter. Self-adjointness (not mere symmetry) guarantees a real spectrum and a spectral resolution — the mathematical backbone of quantum observables and Stone's theorem on time evolution.",
+        "Координата и импульс неограничены; области определения важны. Самосопряжённость (не просто симметричность) гарантирует действительный спектр и спектральное разложение — математический каркас квантовых наблюдаемых и теоремы Стоуна об эволюции.",
+      ),
+      formula(
+        "[\\hat{x}, \\hat{p}] = i\\hbar",
+        "[x̂, p̂] = iℏ",
+        "Canonical commutation relation",
+        "Каноническое коммутационное соотношение",
+      ),
+    ]),
+    topic("distributions", "Distributions (Generalized Functions)", "Обобщённые функции (распределения)", [
+      p(
+        "Distributions are continuous functionals on test functions: the Dirac δ, derivatives of discontinuous functions, and fundamental solutions live here. They make differentiation total and PDE solving flexible.",
+        "Распределения — непрерывные функционалы на пробных функциях: δ Дирака, производные разрывных функций и фундаментальные решения живут здесь. Они делают дифференцирование всюду определённым, а решение УрЧП — гибким.",
+      ),
+      formula(
+        "\\langle \\delta, \\varphi \\rangle = \\varphi(0), \\qquad \\langle T', \\varphi \\rangle = -\\langle T, \\varphi' \\rangle",
+        "⟨δ, φ⟩ = φ(0);   ⟨T′, φ⟩ = −⟨T, φ′⟩",
+      ),
+    ]),
   ],
   problems: [
     prob(

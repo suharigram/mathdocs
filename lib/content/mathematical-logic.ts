@@ -60,6 +60,36 @@ export const mathematicalLogic: Section = {
         "Не путайте теорему Гёделя о полноте (логика первого порядка) с теоремами о неполноте (арифметические теории) — они о разном.",
       ),
     ]),
+    topic("normal-forms", "Truth Tables and Normal Forms", "Таблицы истинности и нормальные формы", [
+      p(
+        "Every propositional formula converts to CNF (AND of ORs) or DNF (OR of ANDs). SAT solvers work on CNF; resolution is a complete proof rule for it.",
+        "Всякая пропозициональная формула приводится к КНФ (И дизъюнктов) или ДНФ (ИЛИ конъюнктов). SAT-решатели работают с КНФ; резолюция — полное правило вывода для неё.",
+      ),
+      formula(
+        "(P \\lor Q) \\land (\\neg P \\lor R) \\quad \\text{(CNF)}",
+        "(P ∨ Q) ∧ (¬P ∨ R)   (КНФ)",
+      ),
+    ]),
+    topic("model-theory", "Structures and Model Theory Basics", "Структуры и основы теории моделей", [
+      p(
+        "A structure gives a domain plus interpretations of symbols; satisfaction defines truth inside it. Model theory studies what theories can express: Löwenheim–Skolem shows first-order theories cannot pin down infinite cardinalities.",
+        "Структура задаёт область и интерпретации символов; выполнимость определяет истинность внутри неё. Теория моделей изучает выразимость теорий: теорема Лёвенгейма–Скулема показывает, что теории первого порядка не фиксируют бесконечные мощности.",
+      ),
+      note(
+        "Nonstandard models of arithmetic contain 'infinite' integers — a consequence of compactness.",
+        "Нестандартные модели арифметики содержат «бесконечные» целые — следствие компактности.",
+      ),
+    ]),
+    topic("computability", "Computability and Church–Turing", "Вычислимость и Черч–Тьюринг", [
+      p(
+        "Turing machines, λ-calculus, and recursive functions define the same computable functions — the Church–Turing thesis. The halting problem, Rice's theorem, and the arithmetical hierarchy map the degrees of unsolvability.",
+        "Машины Тьюринга, λ-исчисление и рекурсивные функции определяют одни и те же вычислимые функции — тезис Черча–Тьюринга. Проблема остановки, теорема Райса и арифметическая иерархия размечают степени неразрешимости.",
+      ),
+      formula(
+        "\\text{computable} \\subsetneq \\text{computably enumerable} \\subsetneq \\text{all functions}",
+        "вычислимые ⊊ перечислимые ⊊ все функции",
+      ),
+    ]),
   ],
   problems: [
     prob(

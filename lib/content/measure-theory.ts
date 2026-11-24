@@ -58,6 +58,38 @@ export const measureTheory: Section = {
         "‖f‖ₚ = (∫ |f|ᵖ dμ)^(1/p);   ‖fg‖₁ ≤ ‖f‖ₚ·‖g‖_q   (1/p + 1/q = 1)",
       ),
     ]),
+    topic("construction", "Constructing Lebesgue Measure", "Построение меры Лебега", [
+      p(
+        "Outer measure covers sets by intervals; Carathéodory's criterion selects the measurable ones. The result extends length uniquely and is translation-invariant — but non-measurable sets exist under AC (Vitali).",
+        "Внешняя мера покрывает множества отрезками; критерий Каратеодори отбирает измеримые. Результат единственно продолжает длину и инвариантен к сдвигам — но при AC существуют неизмеримые множества (Витали).",
+      ),
+      formula(
+        "E \\text{ measurable} \\;\\Leftrightarrow\\; m^*(A) = m^*(A \\cap E) + m^*(A \\setminus E)\\ \\forall A",
+        "E измеримо  ⇔  m*(A) = m*(A ∩ E) + m*(A \\ E) для всех A",
+        "Carathéodory criterion",
+        "Критерий Каратеодори",
+      ),
+    ]),
+    topic("product-fubini", "Product Measures and Fubini", "Произведения мер и теорема Фубини", [
+      p(
+        "Product measure integrates over rectangles; Fubini–Tonelli swaps the order of integration for integrable (or nonnegative) functions — the rigorous license behind iterated integrals.",
+        "Произведение мер интегрирует по прямоугольникам; Фубини–Тонелли меняет порядок интегрирования для интегрируемых (или неотрицательных) функций — строгое разрешение, стоящее за повторными интегралами.",
+      ),
+      formula(
+        "\\int_{X \\times Y} f\\,d(\\mu \\times \\nu) = \\int_X\\!\\int_Y f\\,d\\nu\\,d\\mu",
+        "∫ f d(μ × ν) = ∫∫ f dν dμ",
+      ),
+    ]),
+    topic("radon-nikodym", "Signed Measures and Radon–Nikodym", "Знакопеременные меры и Радон–Никодим", [
+      p(
+        "Signed measures split into positive and negative parts (Hahn–Jordan). When ν ≪ μ, Radon–Nikodym provides a density dν/dμ — the abstract origin of probability densities and conditional expectation.",
+        "Знакопеременные меры распадаются на положительную и отрицательную части (Хан–Жордан). Когда ν ≪ μ, Радон–Никодим даёт плотность dν/dμ — абстрактный исток плотностей вероятности и условного ожидания.",
+      ),
+      formula(
+        "\\nu(A) = \\int_A \\frac{d\\nu}{d\\mu}\\,d\\mu",
+        "ν(A) = ∫ (dν/dμ) dμ",
+      ),
+    ]),
   ],
   problems: [
     prob(

@@ -52,6 +52,36 @@ export const calculusOfVariations: Section = {
         "Поэтому физика записывает законы как вариационные принципы: наименьшее действие объединяет механику, оптику и теорию поля.",
       ),
     ]),
+    topic("second-variation", "Second Variation and Sufficiency", "Вторая вариация и достаточность", [
+      p(
+        "Euler–Lagrange is necessary; the second variation decides min vs max. Legendre's condition L_{y′y′} ≥ 0 and absence of conjugate points (Jacobi) certify a weak minimum.",
+        "Эйлер–Лагранж необходим; вторая вариация решает, минимум это или максимум. Условие Лежандра L_{y′y′} ≥ 0 и отсутствие сопряжённых точек (Якоби) удостоверяют слабый минимум.",
+      ),
+      formula(
+        "\\delta^2 J = \\int \\big(L_{yy}\\eta^2 + 2L_{yy'}\\eta\\eta' + L_{y'y'}\\eta'^2\\big)dx",
+        "δ²J = ∫ (L_yy η² + 2L_yy′ ηη′ + L_y′y′ η′²) dx",
+      ),
+    ]),
+    topic("hamiltonian-form", "Hamiltonian Form and Legendre Transform", "Гамильтонова форма и преобразование Лежандра", [
+      p(
+        "The Legendre transform p = ∂L/∂y′ trades velocities for momenta, turning Euler–Lagrange into Hamilton's canonical system — the bridge to symplectic geometry and mechanics.",
+        "Преобразование Лежандра p = ∂L/∂y′ меняет скорости на импульсы, превращая Эйлера–Лагранжа в каноническую систему Гамильтона — мост к симплектической геометрии и механике.",
+      ),
+      formula(
+        "H = p y' - L, \\qquad y' = H_p,\\ p' = -H_y",
+        "H = py′ − L;   y′ = H_p;   p′ = −H_y",
+      ),
+    ]),
+    topic("optimal-control", "Optimal Control: Pontryagin", "Оптимальное управление: Понтрягин", [
+      p(
+        "Control problems steer dynamics ẋ = f(x,u) to minimize cost. Pontryagin's maximum principle generalizes Euler–Lagrange with a Hamiltonian maximized over controls; bang-bang solutions switch abruptly.",
+        "Задачи управления ведут динамику ẋ = f(x,u) к минимуму затрат. Принцип максимума Понтрягина обобщает Эйлера–Лагранжа гамильтонианом, максимизируемым по управлениям; bang-bang решения переключаются скачком.",
+      ),
+      formula(
+        "H(x,u,\\lambda) = \\lambda^T f(x,u) - L(x,u), \\qquad u^* = \\arg\\max_u H",
+        "H(x,u,λ) = λᵀf(x,u) − L(x,u);   u* = argmax H",
+      ),
+    ]),
   ],
   problems: [
     prob(
