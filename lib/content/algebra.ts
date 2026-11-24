@@ -73,20 +73,43 @@ export const algebra: Section = {
         "Разложение на множители превращает уравнение в произведение: если A·B = 0, то A = 0 или B = 0. Это ключевая идея решения многочленных уравнений.",
       ),
     ]),
-    topic("exponents-logarithms", "Exponents and Logarithms", "Степени и логарифмы", [
+    topic("powers", "Powers and Exponent Rules", "Степени и свойства степеней", [
       p(
-        "Exponent rules let us simplify powers. The logarithm logₐx is the inverse operation: it answers the question “to what power must a be raised to get x?”.",
-        "Свойства степеней позволяют упрощать выражения. Логарифм logₐx — обратная операция: он отвечает на вопрос «в какую степень нужно возвести a, чтобы получить x?».",
+        "aⁿ means n factors of a. The definition extends to zero, negative, and fractional exponents: a⁰ = 1, a⁻ⁿ = 1/aⁿ, a^{m/n} = ⁿ√(aᵐ). Exponent rules turn products into sums of exponents and powers into products.",
+        "aⁿ — произведение n множителей a. Определение распространяется на нулевые, отрицательные и дробные показатели: a⁰ = 1, a⁻ⁿ = 1/aⁿ, a^{m/n} = ⁿ√(aᵐ). Свойства степеней превращают произведения в суммы показателей, а степени — в произведения.",
       ),
       formula(
         "a^m \\cdot a^n = a^{m+n}, \\quad \\frac{a^m}{a^n} = a^{m-n}, \\quad (a^m)^n = a^{mn}",
         "a^m · a^n = a^(m+n);   a^m / a^n = a^(m−n);   (a^m)^n = a^(mn)",
       ),
       formula(
-        "\\log_a(xy) = \\log_a x + \\log_a y, \\qquad \\log_a x = \\frac{\\ln x}{\\ln a}",
-        "logₐ(xy) = logₐx + logₐy;   logₐx = ln x / ln a",
-        "Logarithm product rule and change of base",
-        "Логарифм произведения и переход к новому основанию",
+        "(ab)^n = a^n b^n, \\quad \\Big(\\frac{a}{b}\\Big)^n = \\frac{a^n}{b^n}, \\quad a^0 = 1, \\quad a^{-n} = \\frac{1}{a^n}",
+        "(ab)ⁿ = aⁿbⁿ;   (a/b)ⁿ = aⁿ/bⁿ;   a⁰ = 1;   a⁻ⁿ = 1/aⁿ",
+      ),
+      list(
+        ["Power functions y = xᵃ: parabola (a = 2), hyperbola (a = −1), root (a = 1/2)", "Степенные функции y = xᵃ: парабола (a = 2), гипербола (a = −1), корень (a = 1/2)"],
+        ["Exponential equations: equalize bases, then equalize exponents (2ˣ = 8 ⇒ x = 3)", "Показательные уравнения: уравнять основания, затем показатели (2ˣ = 8 ⇒ x = 3)"],
+        ["Exponential growth/decay y = a·bˣ models populations, interest, and radioactivity", "Экспоненциальный рост/убывание y = a·bˣ моделирует популяции, проценты и радиоактивность"],
+      ),
+      note(
+        "0⁰ is left undefined in analysis; aⁿ with a < 0 and fractional n may leave the reals — check domains.",
+        "0⁰ в анализе не определяют; aⁿ при a < 0 и дробном n может выходить из действительных чисел — проверяйте область определения.",
+      ),
+    ]),
+    topic("logarithms", "Logarithms", "Логарифмы", [
+      p(
+        "The logarithm logₐx is the inverse of exponentiation: it answers “to what power must a be raised to get x?”. Logarithms turn multiplication into addition — the idea behind slide rules and log scales.",
+        "Логарифм logₐx — обратная операция к возведению в степень: он отвечает на вопрос «в какую степень нужно возвести a, чтобы получить x?». Логарифмы превращают умножение в сложение — идея логарифмической линейки и лог-шкал.",
+      ),
+      formula(
+        "\\log_a(xy) = \\log_a x + \\log_a y, \\qquad \\log_a\\frac{x}{y} = \\log_a x - \\log_a y",
+        "logₐ(xy) = logₐx + logₐy;   logₐ(x/y) = logₐx − logₐy",
+      ),
+      formula(
+        "\\log_a x^n = n\\log_a x, \\qquad \\log_a x = \\frac{\\ln x}{\\ln a}",
+        "logₐxⁿ = n·logₐx;   logₐx = ln x / ln a",
+        "Power rule and change of base",
+        "Вынос степени и переход к новому основанию",
       ),
       note(
         "Logarithms are defined only for positive arguments: logₐx requires x > 0, a > 0, a ≠ 1. Always check the domain when solving logarithmic equations.",
